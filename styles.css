@@ -299,3 +299,9 @@ main.page { height: auto; }
 /* On scroll the top bar (logo + phone) slides away; the navigation row stays */
 .site-header { transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1); }
 @media (min-width: 901px) { .site-header.is-scrolled { transform: translateY(calc(-126 * var(--u))); } }
+
+/* Navigation: 16px links; hotel menu label uppercase, Inter Medium */
+@media (min-width: 901px) {
+  .site-header .nav { font-size: 16px; }
+  .hotel-menu > button { font-size: 16px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
+}

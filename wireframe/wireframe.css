@@ -1,72 +1,34 @@
-/* Wireframe version: same layout and copy as the hi-fi pages, drawn in the
-   greyscale "X-box" wireframe style (Inter only, thin lines, image placeholders). */
+/* Wireframe version: same design system as the hi-fi (sharp corners, Merriweather
+   + Inter, same sizes and layout). Only two things change: photos become X
+   placeholders, and colour is reduced to greyscale. */
 
 :root {
-  --ink: #1c1917;
-  --mute: #78716c;
-  --label: #a8a29e;
-  --box: #fafaf9;
-  --dark: #f5f5f4;
-  --line: #e7e5e4;
-  --tag: #e7e5e4;
-  --rating: #f5f5f4;
-  --serif: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --box: #f4f4f4;
+  --dark: #ececec;
+  --line: #d9d9d9;
+  --rating: #e8e8e8;
+  --tag: #d9d9d9;
 }
 
-body { background: #fff; }
-.t160, .t152, .t64, .t56, .t48, .t40, .t32, .m24 { letter-spacing: -0.035em; font-weight: 400; }
-.blk { font-weight: 600 !important; }
-
-/* Guide lines down both sides, like the reference */
-main.page::before, main.page::after { content: ""; position: absolute; top: 0; bottom: 0; border-left: 1px solid var(--line); pointer-events: none; }
-main.page::before { left: calc(30 * var(--u)); }
-main.page::after { right: calc(30 * var(--u)); }
-
 /* Image placeholders */
-.img { background: var(--box); border: 1px solid var(--line); border-radius: 10px; }
+.img { background: var(--box); outline: 1px solid var(--line); outline-offset: -1px; }
 .img.shade::after, .hero::after { display: none; }
 .ph-x { position: absolute; inset: 0; width: 100%; height: 100%; }
 .ph-x line { stroke: var(--line); stroke-width: 1; vector-effect: non-scaling-stroke; }
-.hero { background: var(--box); border-radius: 0; border: 0; border-bottom: 1px solid var(--line); }
+.hero { background: var(--box); box-shadow: inset 0 -1px 0 var(--line); }
 .hero-media video { display: none; }
-.hero-media .ph-x { opacity: 1; }
 
 /* Text that sat on photos becomes ink */
 .hero-title, .lbl, .white, .hero-sub { color: var(--ink) !important; text-shadow: none !important; }
 
-/* Header: always light */
-.site-header, .site-header.is-solid { background: rgba(255, 255, 255, 0.92); color: var(--ink); box-shadow: 0 1px 0 var(--line); backdrop-filter: blur(8px); }
-.site-header .rule, .site-header.is-solid .rule { border-top-color: var(--line); }
+/* Header: no photo behind it, so it is always the solid (white) state */
+.site-header { background: #fff; color: var(--ink); box-shadow: 0 1px 0 var(--line); }
+.site-header .rule { border-top-color: var(--line); }
 .site-header:not(.is-solid) .logo img, .site-header:not(.is-solid) .phone svg { filter: none; }
-.book, .site-header:not(.is-solid) .book, .menu-open .site-header .book { background: var(--ink); color: #fff; border-radius: 999px; }
-.tag { background: var(--dark); color: var(--mute); border-radius: 999px; }
+.site-header:not(.is-solid) .book { background: var(--ink); color: #fff; }
 
-/* Buttons and controls */
-.btn-dark, .btn-light { background: var(--ink); color: #fff; border-radius: 999px; }
-.uline { border-bottom-width: 1px; }
-.sq, .sq.grey { background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 999px; box-shadow: none; }
-.sq:hover { background: var(--ink); color: #fff; }
-.booking { border: 1px solid var(--line); border-radius: 14px; }
-.booking .check { border: 0; background: var(--ink); color: #fff; border-radius: 999px; }
-.panel { background: var(--box); border: 1px solid var(--line); border-radius: 14px; }
-.tile, .review { background: var(--box); border: 1px solid var(--line); border-radius: 12px; }
-.rating { background: var(--dark); border: 1px solid var(--line); border-radius: 12px; box-shadow: none; }
-.stars svg path { fill: var(--label); }
-.avs i { background: var(--line); border-color: var(--dark); }
-.field-box { border: 1px solid var(--line); border-radius: 10px; }
-.chip span { border: 1px solid var(--line); border-radius: 999px; }
-.go { border: 1px solid var(--line); border-radius: 999px; }
-.prog i { background: var(--ink); height: 2px; top: -1px; }
-.rule, .faq-row, .faq-row p { border-color: var(--line); }
-.hotel-panel img, .hotel-panel .ph-x { border-radius: 8px; }
-.hotel-panel a > svg { position: relative; aspect-ratio: 4 / 3; height: auto; background: var(--box); border: 1px solid var(--line); border-radius: 8px; }
+/* Buttons that were white on photos */
+.btn-light { background: var(--ink); color: #fff; }
 
-/* Inter runs wider than Merriweather: step the display sizes down so titles keep the wireframe line breaks */
-.t160 { font-size: calc(124 * var(--u)); }
-.t152 { font-size: calc(116 * var(--u)); }
-.t64 { font-size: calc(56 * var(--u)); }
-.t56 { font-size: calc(50 * var(--u)); }
-.t48 { font-size: calc(42 * var(--u)); }
-.t40 { font-size: calc(36 * var(--u)); }
-.t32 { font-size: calc(29 * var(--u)); }
-.page-bay .hero-title .l2 { margin-top: 0 !important; }
+/* Placeholder thumbnails in the hotel dropdown */
+.hotel-panel a > svg { position: relative; aspect-ratio: 4 / 3; height: auto; background: var(--box); outline: 1px solid var(--line); outline-offset: -1px; }

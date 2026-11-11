@@ -281,7 +281,7 @@ input.field-box:focus { outline: 2px solid var(--ink); outline-offset: -2px; }
 }
 
 /* Switch between the hi-fi and wireframe versions */
-.version-switch { position: fixed; right: 16px; bottom: 16px; z-index: 60; padding: 10px 16px; border-radius: 999px; background: #1e1e1e; color: #fff; font: 500 13px/1 var(--sans); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); }
+.version-switch { position: fixed; right: 16px; bottom: 16px; z-index: 60; padding: 10px 16px; border-radius: 0; background: #1e1e1e; color: #fff; font: 500 13px/1 var(--sans); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); }
 .version-switch:hover { background: #000; }
 
 /* Each wireframe section is its own block (lets sections be hidden or reordered).

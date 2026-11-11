@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S Hotel Montego Bay</title>
+<style>
+:root { --bg: #f7f4ef; --text: #1c1c1c; --accent: #a67c52; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, serif; background: var(--bg); color: var(--text); }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4%; background: rgba(247,244,239,0.96); position: sticky; top: 0; }
+a { color: inherit; }
+.hero { min-height: 80vh; background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80') center/cover; display: flex; align-items: flex-end; padding: 4rem; color: white; }
+.hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 400; max-width: 700px; }
+.booking-bar { background: white; padding: 1.2rem 4%; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.booking-bar input, .btn { padding: 0.85rem 1rem; border: 1px solid #ddd; border-radius: 4px; font: inherit; }
+.btn { background: var(--accent); color: white; border: none; }
+.section { padding: 4.5rem 4%; max-width: 1100px; margin: 0 auto; }
+.section h2 { font-size: 2.2rem; font-weight: 400; margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+.grid img { width: 100%; height: 340px; object-fit: cover; border-radius: 6px; }
+footer { background: #1c1c1c; color: white; padding: 2.5rem 4%; text-align: center; }
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } .hero { padding: 2rem; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" style="text-decoration:none;font-weight:600;letter-spacing:1px;">S HOTEL MONTEGO BAY</a>
+  <a href="parent.html" style="text-decoration:none;">All hotels</a>
+</nav>
+<section class="hero"><h1>On Doctor's Cave Beach.<br>Art in every corner.</h1></section>
+<div class="booking-bar">
+  <input type="date" aria-label="Check in">
+  <input type="date" aria-label="Check out">
+  <button class="btn">Check availability</button>
+</div>
+<section class="section"><div class="grid">
+  <div><h2>The beach is the reason.</h2><p>Direct access to Doctor's Cave. Slow afternoons, the Sky Deck, and the sound of the water. Not a large resort. A boutique all-inclusive with space to breathe.</p></div>
+  <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80" alt="Beach">
+</div></section>
+<section class="section"><div class="grid">
+  <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1200&q=80" alt="Art">
+  <div><h2>A museum you can stay in.</h2><p>Life-size Jamaican icons, artwork throughout the property, and Bob Marley record players in the rooms. Culture is not a detail here.</p></div>
+</div></section>
+<section class="section"><h2>Dining and spa</h2><p>Rocksteady, Jamrock, Roots Rock, and the Marketplace. Irie Spa with subterranean baths. Everything is included, but the pace stays calm.</p></section>
+<footer>S Hotel Montego Bay · Doctor's Cave Beach</footer>
+</body>
+</html>

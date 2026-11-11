@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S Hotels Jamaica</title>
+<style>
+:root { --bg: #f8f5f0; --text: #1a1a1a; --accent: #8b6f47; --card: #ffffff; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4%; background: rgba(248,245,240,0.95); position: sticky; top: 0; }
+.logo { font-weight: 600; letter-spacing: 1px; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a { text-decoration: none; color: var(--text); }
+.hero { min-height: 78vh; background: linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.38)), url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=2000&q=80') center/cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 2rem; }
+.hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 400; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; max-width: 560px; margin: 0 auto; }
+.booking-bar { background: white; padding: 1.2rem 4%; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.booking-bar input, .booking-bar select, .btn { padding: 0.8rem 1rem; border: 1px solid #ddd; border-radius: 4px; font: inherit; }
+.btn { background: var(--accent); color: white; border: none; cursor: pointer; }
+.section { padding: 4.5rem 4%; max-width: 1200px; margin: 0 auto; }
+.section h2 { font-size: 2.1rem; font-weight: 400; margin-bottom: 1.2rem; }
+.hotels { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.hotel-card { background: var(--card); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-decoration: none; color: inherit; }
+.hotel-card img { width: 100%; height: 260px; object-fit: cover; display: block; }
+.hotel-card .content { padding: 1.4rem; }
+.social { background: #f0ebe3; padding: 3.5rem 4%; text-align: center; }
+footer { background: #1a1a1a; color: white; padding: 2.5rem 4%; text-align: center; }
+@media (max-width: 768px) { .hotels { grid-template-columns: 1fr; } .nav-links { display: none; } }
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html" style="text-decoration:none;color:inherit;">S HOTELS JAMAICA</a>
+  <div class="nav-links">
+    <a href="#hotels">Our Hotels</a>
+    <a href="montego-bay.html">Montego Bay</a>
+    <a href="kingston.html">Kingston</a>
+  </div>
+</nav>
+<section class="hero">
+  <div>
+    <h1>Two hotels.<br>One Jamaican story.</h1>
+    <p>Boutique stays in Montego Bay and Kingston. Atmosphere, culture, and place.</p>
+  </div>
+</section>
+<div class="booking-bar">
+  <select><option>Select hotel</option><option>Montego Bay</option><option>Kingston</option></select>
+  <input type="date" aria-label="Check in">
+  <input type="date" aria-label="Check out">
+  <button class="btn">Check availability</button>
+</div>
+<section class="section" id="hotels">
+  <h2>Our hotels</h2>
+  <div class="hotels">
+    <a class="hotel-card" href="montego-bay.html">
+      <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80" alt="Montego Bay">
+      <div class="content"><h3>S Hotel Montego Bay</h3><p>Boutique all-inclusive on Doctor's Cave Beach. Art, calm, and the water.</p></div>
+    </a>
+    <a class="hotel-card" href="kingston.html">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80" alt="Kingston">
+      <div class="content"><h3>S Hotel Kingston</h3><p>Urban boutique in the heart of the city. Professional, cultural, and close to everything.</p></div>
+    </a>
+  </div>
+</section>
+<section class="social"><h2>Recognised</h2><p>Condé Nast · TripAdvisor · SLH</p></section>
+<footer>S Hotels Jamaica · Montego Bay and Kingston</footer>
+</body>
+</html>

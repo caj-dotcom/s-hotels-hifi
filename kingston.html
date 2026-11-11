@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S Hotel Kingston</title>
+<style>
+:root { --bg: #f5f3ef; --text: #1a1a1a; --accent: #7a6a58; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, serif; background: var(--bg); color: var(--text); }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4%; background: rgba(245,243,239,0.96); position: sticky; top: 0; }
+a { color: inherit; }
+.hero { min-height: 80vh; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=2000&q=80') center/cover; display: flex; align-items: flex-end; padding: 4rem; color: white; }
+.hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 400; max-width: 680px; }
+.booking-bar { background: white; padding: 1.2rem 4%; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.booking-bar input, .btn { padding: 0.85rem 1rem; border: 1px solid #ddd; border-radius: 4px; font: inherit; }
+.btn { background: var(--accent); color: white; border: none; }
+.section { padding: 4.5rem 4%; max-width: 1100px; margin: 0 auto; }
+.section h2 { font-size: 2.1rem; font-weight: 400; margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+.grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; }
+footer { background: #1a1a1a; color: white; padding: 2.5rem 4%; text-align: center; }
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } .hero { padding: 2rem; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" style="text-decoration:none;font-weight:600;letter-spacing:1px;">S HOTEL KINGSTON</a>
+  <a href="parent.html" style="text-decoration:none;">All hotels</a>
+</nav>
+<section class="hero"><h1>In the heart of Kingston.</h1></section>
+<div class="booking-bar">
+  <input type="date" aria-label="Check in">
+  <input type="date" aria-label="Check out">
+  <button class="btn">Check availability</button>
+</div>
+<section class="section"><div class="grid">
+  <div><h2>A calm base in the city.</h2><p>Boutique hotel for business and leisure. Reliable service, Roman tubs, and a rooftop pool. Close to the Bob Marley Museum and Devon House.</p></div>
+  <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80" alt="Hotel">
+</div></section>
+<section class="section"><div class="grid">
+  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Dining">
+  <div><h2>Dining and events.</h2><p>Noted Jamaican breakfast. Rocksteady and Strings Cafe. Strong banqueting for meetings and celebrations. The hotel feels like Jamaica, not a brand box.</p></div>
+</div></section>
+<footer>S Hotel Kingston · New Kingston</footer>
+</body>
+</html>

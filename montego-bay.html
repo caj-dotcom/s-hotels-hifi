@@ -2,195 +2,296 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S Hotel Montego Bay</title>
+<script>document.documentElement.classList.add("js")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-bay">
-<header class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80')">
-  <nav class="nav">
-    <div class="nav-left">
-      <a href="index.html">Montego Bay</a>
-      <a href="#rooms">Rooms</a>
-      <a href="#beach">Beach</a>
+
+<header class="site-header">
+  <div class="mast-top">
+    <a class="brand" href="index.html" aria-label="S Hotels Jamaica"><span class="mark">S</span><span class="word">Hotels Jamaica</span></a>
+    <a class="mast-phone" href="tel:+18444864499"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span class="num">+1 844 486 4499</span></a>
+  </div>
+  <div class="mast-row">
+    <div class="hotel-menu">
+      <button type="button" aria-expanded="false" aria-controls="hotel-panel">Montego Bay</button>
+      <div class="hotel-panel" id="hotel-panel" hidden>
+        <a href="kingston.html"><img src="images/ks-entrance.jpg" alt="">S Hotel Kingston</a>
+        <a href="index.html"><img src="images/mb-team.jpg" alt="">S Hotels Jamaica</a>
+      </div>
+    </div>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#rooms">Rooms &amp; Suites</a>
+      <a href="#experiences">Experiences</a>
       <a href="#dining">Dining</a>
-      <a href="#wellness">Wellness</a>
-      <a href="#weddings">Weddings</a>
+      <a href="#dining">Wellness</a>
+      <a href="#weddings">Weddings &amp; Honeymoons</a>
+      <a href="#art">Art &amp; Heritage</a>
+    </nav>
+    <div class="nav-end">
+      <a class="book" href="#book">Book now<span class="tag">No fees</span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><b>Menu</b><i></i></button>
     </div>
-    <a class="brand" href="index.html"><span class="mark">S</span> HOTELS JAMAICA</a>
-    <div class="nav-right">
-      <a href="tel:+18883469897">+1 888 346 9897</a>
-      <a class="book" href="#book">BOOK NOW<small>No booking fees</small></a>
-    </div>
-  </nav>
-  <div class="hero-copy">
-    <p class="eyebrow">Boutique all-inclusive · Doctor's Cave Beach</p>
-    <h1>Jamaican spirit<br>in every corner.</h1>
   </div>
 </header>
 
-<form class="booking" id="book" onsubmit="return false">
-  <label class="field"><span>LOCATION</span><strong>Montego Bay</strong></label>
-  <label class="field"><span>CHECK IN / CHECK OUT</span><input type="text" value="Select dates" aria-label="Dates"></label>
-  <label class="field"><span>ROOMS</span><strong>1 room, 2 guests</strong></label>
-  <button class="check" type="submit">CHECK AVAILABILITY</button>
-</form>
+<div class="menu-panel" id="menu" aria-hidden="true">
+  <nav class="big" aria-label="Mobile">
+    <a href="#rooms">Rooms &amp; Suites</a>
+    <a href="#experiences">Experiences</a>
+    <a href="#dining">Dining</a>
+    <a href="#dining">Wellness</a>
+    <a href="#weddings">Weddings &amp; Honeymoons</a>
+    <a href="#art">Art &amp; Heritage</a>
+  </nav>
+  <div class="meta"><a href="tel:+18444864499">+1 844 486 4499</a><a class="btn" href="#book">Book now</a></div>
+</div>
 
-<section class="section">
-  <div class="intro-grid">
-    <div>
-      <p class="eyebrow">On the Hip Strip</p>
-      <h2>The beach is the front door.</h2>
-      <p class="muted">S Hotel Montego Bay is a boutique all-inclusive with direct access to Doctor's Cave. Guests walk out of the lobby onto the sand, stop for the art, and settle into a pace that is looked after rather than scheduled. Children are welcome from 8. This is not a large resort.</p>
-      <div class="facts">
-        <div><strong>Doctor's Cave</strong><span class="fine">Direct beach access</span></div>
-        <div><strong>Art on the walls</strong><span class="fine">Icons through the house</span></div>
-        <div><strong>Sangster</strong><span class="fine">A short ride from the airport</span></div>
+<main>
+  <!-- Autoplay HD video -->
+  <section class="hero" aria-label="S Hotel Montego Bay">
+    <div class="hero-media" aria-hidden="true">
+      <video muted loop playsinline autoplay preload="none"><!-- <source src="video/s-hotel-montego-bay.mp4" type="video/mp4"> --></video>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
+    </div>
+    <div class="wrap hero-inner">
+      <div class="hero-bay">
+        <h1>Jamaican Spirit in <span class="l2">Every Corner</span></h1>
+        <p class="sub"><span>Boutique all-inclusive</span><span>Direct access to Doctor's Cave Beach</span></p>
       </div>
     </div>
-    <div class="story-photo"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1200&q=80" alt="Art in the hotel"></div>
-  </div>
-</section>
+  </section>
 
-<section class="section" style="padding-top:0">
-  <div class="split">
-    <h2>Awards</h2>
-    <p class="muted">Grateful for the recognition, and more grateful for the afternoons, the music, and the staff guests come back for.</p>
-  </div>
-  <div class="awards">
-    <div class="award">CONDÉ NAST</div>
-    <div class="award">TRIPADVISOR</div>
-    <div class="award">SMALL LUXURY HOTELS</div>
-    <div class="award">USA TODAY</div>
-  </div>
-  <div class="rule"><i></i></div>
-</section>
-
-<section class="section" id="beach">
-  <p class="eyebrow">Beach & atmosphere</p>
-  <h2>Nobody is racing for a cabana.</h2>
-  <p class="muted">There is room to sit. The Sky Deck is for the view. The water is the plan. At night the music stays part of the house, not a party the whole bay has to join.</p>
-  <div class="hotel-grid" style="margin-top:1.5rem">
-    <div class="card"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1400&q=80" alt="Beach"><figcaption><h3>The beach</h3><p>Doctor's Cave, steps from the lobby.</p></figcaption></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1400&q=80" alt="Pool"><figcaption><h3>The house</h3><p>Pool, Sky Deck, and art between them.</p></figcaption></div>
-  </div>
-</section>
-
-<section class="section" id="rooms" style="padding-top:1rem">
-  <div class="split">
-    <div>
-      <p class="eyebrow">Rooms & suites</p>
-      <h2>Stay close to the water, or above it.</h2>
-      <p class="muted">Rooms are calm and well kept. Record players and Jamaican art sit in the stay, not as a theme. Ask for a quieter side if street sound matters.</p>
-      <a class="linkline" href="#book">VIEW ROOMS</a>
-    </div>
-    <div class="story-photo"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=80" alt="Guest room"></div>
-  </div>
-</section>
-
-<section class="section" id="dining" style="padding-top:0">
-  <div class="rooms">
-    <article>
-      <div class="room"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Dining"><span>Restaurants & bars</span></div>
-      <p class="muted">Rocksteady, Jamrock, Roots Rock, and the Marketplace. Included, and still worth sitting down for.</p>
-      <a class="linkline" href="#book">EXPLORE</a>
-    </article>
-    <article id="wellness">
-      <div class="room"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80" alt="Spa"><span>Spa & wellness</span></div>
-      <p class="muted">Irie Spa and the baths. A slower part of an already unhurried day.</p>
-      <a class="linkline" href="#book">EXPLORE</a>
-    </article>
-    <article>
-      <div class="room"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Celebration"><span>Meetings</span></div>
-      <p class="muted">Small gatherings when the beach is the reason everyone came.</p>
-      <a class="linkline" href="#weddings">EXPLORE</a>
-    </article>
-  </div>
-</section>
-
-<section class="video-band" id="weddings" style="background-image:url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=2000&q=80')">
-  <div>
-    <p class="eyebrow">Weddings & honeymoons</p>
-    <h2 style="color:#fff;max-width:12ch">Romance, without the resort show.</h2>
-    <p style="max-width:46ch">A celebration on the beach, then a quiet room. The Hip Strip is a door you can open, not the whole stay.</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="contact">
-    <div>
-      <h3 class="serif" style="font-size:2rem;margin:0 0 .4rem">S Hotel Montego Bay</h3>
-      <p class="muted">Jimmy Cliff Boulevard, the Hip Strip. Doctor's Cave Beach at the door.</p>
-      <a class="linkline" href="https://maps.google.com/?q=S+Hotel+Montego+Bay" target="_blank" rel="noreferrer">OPEN MAP</a>
-    </div>
-    <div>
-      <h3 class="serif" style="font-size:2rem;margin:0 0 .4rem">Room reservation</h3>
-      <p class="muted">Call +1 888 346 9897. Booking on this site carries no extra fee.</p>
-      <a class="linkline" href="tel:+18883469897">CONTACT US</a>
-    </div>
-  </div>
-</section>
-
-<section class="section faq" style="padding-top:0">
-  <h2>Questions, answered here.</h2>
-  <details open>
-    <summary>Is the hotel all-inclusive?</summary>
-    <p>Yes. Meals and drinks are included. It is still a boutique hotel, not a large resort with a long activity sheet.</p>
-  </details>
-  <details>
-    <summary>How close is Doctor's Cave Beach?</summary>
-    <p>It is the beach at the hotel. Guests walk out to it.</p>
-  </details>
-  <details>
-    <summary>Can I walk to the Hip Strip?</summary>
-    <p>Yes. It is there when you want it, and the hotel stays quiet when you do not.</p>
-  </details>
-  <details>
-    <summary>Are children welcome?</summary>
-    <p>Children from 8 are welcome. Some areas of the hotel stay adult-only.</p>
-  </details>
-  <details>
-    <summary>How far is the airport?</summary>
-    <p>Sangster International is a short ride from the Hip Strip.</p>
-  </details>
-</section>
-
-<section class="section" style="padding-top:1rem">
-  <div class="news">
-    <div class="news-photo" style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80')"></div>
-    <form onsubmit="return false" style="padding:3rem 2.2rem">
-      <h2>Hear about Montego Bay</h2>
-      <input placeholder="Your name" aria-label="Your name">
-      <input type="email" placeholder="Your email" aria-label="Your email">
-      <div class="row">
-        <label class="fine"><input type="checkbox"> I agree to the privacy policy.</label>
-        <button class="go" type="submit">→</button>
+  <!-- Booking -->
+  <section class="booking wrap" id="book" aria-label="Check availability">
+    <form>
+      <div class="field">
+        <span class="label">Location</span>
+        <span class="val">Montego Bay</span>
+        <input type="hidden" name="hotel" value="Montego Bay">
       </div>
+      <div class="field dates">
+        <label class="label" for="b-dates">Check in / Check out</label>
+        <input id="b-dates" class="val" name="dates" value="29 OCT 26 - 29 OCT 26" data-dates>
+      </div>
+      <div class="field">
+        <label class="label" for="b-rooms">Rooms</label>
+        <select id="b-rooms" name="rooms">
+          <option>1 room: 1 guest</option>
+          <option selected>1 room: 2 guests</option>
+          <option>2 rooms: 4 guests</option>
+        </select>
+      </div>
+      <button class="btn" type="submit">Check availability</button>
     </form>
-  </div>
-</section>
+    <p class="status" role="status" aria-live="polite"></p>
+  </section>
 
-<footer>
-  <div>
-    <a class="brand" href="index.html" style="justify-content:flex-start"><span class="mark">S</span></a>
-    <h4>HOTELS</h4>
-    <a href="kingston.html">Kingston</a>
-    <a href="montego-bay.html">Montego Bay</a>
+  <!-- Intro -->
+  <section class="sec wrap" id="art" aria-label="About S Hotel Montego Bay">
+    <div class="m-intro">
+      <div class="text reveal">
+        <p class="lead">S Hotel Montego Bay effortlessly captures the magic of what makes Jamaica a traveller's dream destination, offering a hospitality experience that will stay with you forever. With our chic, design-forward vibe and a deep-rooted dedication to service, our hotel is 'THE' place to be in the city.</p>
+        <figure class="bird">
+          <div class="frame"><img src="images/mb-doctor-bird.jpg" alt="The Doctor Bird sculpture on S Hotel Montego Bay" loading="lazy"></div>
+          <figcaption>The Doctor Bird sculpture</figcaption>
+        </figure>
+        <p class="air">5 minutes to the Airport</p>
+      </div>
+      <figure class="frame tall reveal"><img src="images/mb-sky-view.jpg" alt="An ocean-view suite over Doctor's Cave Beach" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section class="sec wrap" aria-labelledby="awards-title">
+    <div class="head reveal">
+      <h2 class="h2" id="awards-title">Awards</h2>
+      <p class="copy">We are grateful for the recognition, but even more grateful for what inspires it. Meaningful experiences, genuine care and moments that stay with our guests long after they leave.</p>
+    </div>
+    <div class="rail tiles" id="awards-rail" data-rail>
+      <div class="tile"><b>Condé Nast Traveler</b><span>Readers' Choice</span></div>
+      <div class="tile"><b>Tripadvisor</b><span>Travellers' Choice</span></div>
+      <div class="tile"><b>Small Luxury Hotels of the World</b><span>Member</span></div>
+      <div class="tile"><b>USA Today</b><span>10Best</span></div>
+    </div>
+    <div class="progress" data-progress="awards-rail"><i></i></div>
+  </section>
+
+  <!-- Experiences -->
+  <section class="sec wrap" id="experiences" aria-labelledby="xp-title" data-xp>
+    <div class="m-xp">
+      <div class="frame big xp-swap reveal"><img data-xp-big src="images/mb-lounge.jpg" alt=""></div>
+      <div class="reveal">
+        <h2 class="h2" id="xp-title">Experiences &amp; lifestyle</h2>
+        <p class="copy">Life-size Jamaican icons, Bob Marley record players in the rooms, and Doctor's Cave at the door.</p>
+        <div class="frame next xp-swap"><img data-xp-next src="images/mb-beach-walk.jpg" alt=""><button class="sq" type="button" data-xp-go aria-label="Next">→</button></div>
+      </div>
+    </div>
+    <ol data-xp-list hidden>
+      <li data-img="images/mb-lounge.jpg"></li>
+      <li data-img="images/mb-beach-walk.jpg"></li>
+      <li data-img="images/mb-sky-view.jpg"></li>
+      <li data-img="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80"></li>
+    </ol>
+  </section>
+
+  <!-- Beach & Atmosphere -->
+  <section class="sec wrap" aria-labelledby="beach-title">
+    <h2 class="mega reveal" id="beach-title">Beach &amp; Atmosphere</h2>
+    <div class="duo-wrap reveal">
+      <div class="duo" id="beach-rail" data-rail>
+        <figure><div class="frame"><img src="images/mb-beach-umbrellas.jpg" alt="Doctor's Cave Beach" loading="lazy"></div><figcaption class="cap">Doctor's Cave Beach, direct from the hotel.</figcaption></figure>
+        <figure><div class="frame"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80" alt="" loading="lazy"></div><figcaption class="cap">The beachfront pool, cabanas and the bay.</figcaption></figure>
+        <figure><div class="frame"><img src="images/mb-beach-walk.jpg" alt="" loading="lazy"></div><figcaption class="cap">The Hip Strip, right outside the door.</figcaption></figure>
+      </div>
+      <button class="sq" type="button" aria-controls="beach-rail" data-dir="1" aria-label="Next">→</button>
+    </div>
+  </section>
+
+  <!-- Rooms & Suites -->
+  <section class="sec wrap" id="rooms" aria-labelledby="rooms-title">
+    <div class="m-rooms">
+      <div class="frame reveal"><img src="images/mb-room-cabana.jpg" alt="" loading="lazy"></div>
+      <div class="reveal">
+        <h2 class="h2" id="rooms-title">Rooms &amp; Suites</h2>
+        <p class="copy">Ocean views, Jamaican art, a record player, a yoga mat and drinks waiting in the fridge.</p>
+        <a class="btn" href="#book">View rooms</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant & Bars / Spa & Wellness / Meetings & Events -->
+  <section class="sec wrap" id="dining" aria-label="Restaurant and bars, spa and wellness, meetings and events">
+    <div class="trio">
+      <article class="reveal">
+        <div class="frame"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80" alt="" loading="lazy"></div>
+        <h3>Restaurant &amp; Bars</h3>
+        <p>Rocksteady, Jamrock, Roots Rock and the Marketplace, all included.</p>
+        <a class="link" href="tel:+18444864499">Explore</a>
+      </article>
+      <article class="reveal">
+        <div class="frame"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=80" alt="" loading="lazy"></div>
+        <h3>Spa &amp; Wellness</h3>
+        <p>Irie Spa &amp; Baths, with plunge pools, a sauna and five treatment rooms.</p>
+        <a class="link" href="tel:+18444864499">Explore</a>
+      </article>
+      <article class="reveal">
+        <div class="frame"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=80" alt="" loading="lazy"></div>
+        <h3>Meetings &amp; Events</h3>
+        <p>Small gatherings by the sea, from birthday dinners to team retreats.</p>
+        <a class="link" href="tel:+18444864499">Explore</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Weddings & Honeymoons (video) -->
+  <section class="sec film" id="weddings" aria-labelledby="weddings-title">
+    <!-- Video: replace the image with <video autoplay muted loop playsinline> -->
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
+    <div class="film-body reveal">
+      <h2 class="h2" id="weddings-title">Weddings &amp; Honeymoons</h2>
+      <p class="copy">An intimate ceremony by the sea, then a quiet room. Ask about Just the Two of Us.</p>
+      <a class="btn on-dark" href="tel:+18444864499">Discover</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="sec wrap" aria-label="Contact">
+    <div class="contact-row reveal">
+      <div>
+        <h3>S Hotel Montego Bay</h3>
+        <a class="link" href="https://maps.google.com/?q=S+Hotel+Montego+Bay" target="_blank" rel="noreferrer">Open map &gt;</a>
+        <p>363 Cocoanut Row, Palm Beach, FL 33480, United States US toll free +1 833 549 5511 +1 (561) 270-1500</p>
+      </div>
+      <div class="c-right">
+        <h3>Room Reservation</h3>
+        <a class="link" href="tel:+18444864499">Contact us &gt;</a>
+        <p>You can contact our team at reservations.vineta@oetkerhotels.com or over the phone: +1 (561) 813-8027</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec wrap faq" aria-labelledby="faq-title">
+    <h2 class="h2 faq-title reveal" id="faq-title">Frequently Asked Questions</h2>
+    <div class="reveal">
+      <details><summary>Is the hotel all-inclusive?</summary><p>Yes. Meals and drinks are included across the restaurants and bars.</p></details>
+      <details><summary>How close is Doctor’s Cave Beach?</summary><p>The hotel has direct access to Doctor's Cave Beach.</p></details>
+      <details><summary>Can I walk to the Hip Strip from the hotel?</summary><p>Yes. The hotel is on Jimmy Cliff Boulevard, on the Hip Strip.</p></details>
+      <details><summary>Are children allowed or children friendly ?</summary><p>Children aged 8 and older are welcome. Some areas stay adult-only.</p></details>
+      <details><summary>How far is the hotel from the airport?</summary><p>About 5 minutes from Sangster International Airport.</p></details>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="sec wrap" aria-labelledby="news-title">
+    <div class="news reveal">
+      <div class="frame"><img src="images/mb-beach-walk.jpg" alt="" loading="lazy"></div>
+      <div class="news-body">
+        <h2 class="h2" id="news-title">Sign up to the S Hotels Jamaica Newsletter</h2>
+        <form class="signup">
+          <input class="box" name="name" placeholder="Your Name" aria-label="Your Name" autocomplete="name">
+          <input class="box" name="email" type="email" placeholder="Your Email" aria-label="Your Email" autocomplete="email" required>
+          <div class="hear" id="hear">I want to hear about</div>
+          <fieldset class="chips" aria-labelledby="hear">
+            <label><input type="radio" name="list" value="both" checked><span>Both</span></label>
+            <label><input type="radio" name="list" value="kingston"><span>Kingston</span></label>
+            <label><input type="radio" name="list" value="montego-bay"><span>Montego Bay</span></label>
+          </fieldset>
+          <div class="form-end">
+            <label class="consent"><input type="checkbox" required> I agree to the Privacy Policy.</label>
+            <button class="go" type="submit" aria-label="Sign up">→</button>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div class="c1">
+      <span class="mark" aria-hidden="true">S</span>
+      <h4>Hotels</h4>
+      <ul class="caps">
+        <li><a href="kingston.html">Kingston</a></li>
+        <li><a href="montego-bay.html">Montego Bay</a></li>
+        <li><a href="index.html#foundation">Foundation</a></li>
+      </ul>
+      <p class="copy-r">©2026</p>
+    </div>
+    <div class="c2">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="index.html">Contact</a></li>
+        <li><a href="index.html#story">About Us</a></li>
+        <li><a href="index.html">Careers</a></li>
+        <li><a href="index.html">Media</a></li>
+        <li><a href="index.html">Terms &amp; Policies</a></li>
+        <li><a href="index.html">Cookie Settings</a></li>
+      </ul>
+    </div>
+    <div class="c3">
+      <h4>Follow Us</h4>
+      <ul class="out">
+        <li><a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
+        <li><a href="https://x.com" target="_blank" rel="noreferrer">Twitter/ X</a></li>
+      </ul>
+    </div>
   </div>
-  <div>
-    <h4>LINKS</h4>
-    <a href="index.html">About us</a>
-    <a href="tel:+18883469897">Contact</a>
-  </div>
-  <div>
-    <h4>FOLLOW US</h4>
-    <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-    <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
-  </div>
-  <div><h4>THIS PAGE</h4><p>Montego Bay direction for review with Miles.</p></div>
-  <p class="copy">© 2026 S Hotels Jamaica</p>
 </footer>
+
+<script src="site.js"></script>
 </body>
 </html>

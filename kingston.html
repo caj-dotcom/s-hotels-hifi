@@ -2,192 +2,305 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S Hotel Kingston</title>
+<script>document.documentElement.classList.add("js")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-king">
-<header class="hero" style="background-image:linear-gradient(rgba(20,16,12,.35),rgba(20,16,12,.35)),url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=2000&q=80')">
-  <nav class="nav">
-    <div class="nav-left">
-      <a href="index.html">Kingston</a>
-      <a href="#rooms">Rooms</a>
+
+<header class="site-header">
+  <div class="mast-top">
+    <a class="brand" href="index.html" aria-label="S Hotels Jamaica"><span class="mark">S</span><span class="word">Hotels Jamaica</span></a>
+    <a class="mast-phone" href="tel:+18444864499"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span class="num">+1 844 486 4499</span></a>
+  </div>
+  <div class="mast-row">
+    <div class="hotel-menu">
+      <button type="button" aria-expanded="false" aria-controls="hotel-panel">Kingston</button>
+      <div class="hotel-panel" id="hotel-panel" hidden>
+        <a href="montego-bay.html"><img src="images/mb-beach-umbrellas.jpg" alt="">S Hotel Montego Bay</a>
+        <a href="index.html"><img src="images/mb-team.jpg" alt="">S Hotels Jamaica</a>
+      </div>
+    </div>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#rooms">Rooms &amp; Suites</a>
+      <a href="#experiences">Experiences</a>
       <a href="#dining">Dining</a>
-      <a href="#events">Meetings</a>
-      <a href="#explore">City</a>
+      <a href="#meetings">Meetings/ Events</a>
+      <a href="#welcome">Art &amp; Heritage</a>
+      <a href="#rooms">Offers</a>
+    </nav>
+    <div class="nav-end">
+      <a class="book" href="#book">Book now<span class="tag">No fees</span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><b>Menu</b><i></i></button>
     </div>
-    <a class="brand" href="index.html"><span class="mark">S</span> HOTELS JAMAICA</a>
-    <div class="nav-right">
-      <a href="tel:+18444864499">+1 844 486 4499</a>
-      <a class="book" href="#book">BOOK NOW<small>No booking fees</small></a>
-    </div>
-  </nav>
-  <div class="hero-copy">
-    <p class="eyebrow">Jamaica's heartbeat</p>
-    <h1>The heartbeat<br>of Jamaica.</h1>
   </div>
 </header>
 
-<form class="booking" id="book" onsubmit="return false">
-  <label class="field"><span>LOCATION</span><strong>Kingston</strong></label>
-  <label class="field"><span>CHECK IN / CHECK OUT</span><input type="text" value="Select dates" aria-label="Dates"></label>
-  <label class="field"><span>ROOMS</span><strong>1 room, 2 guests</strong></label>
-  <button class="check" type="submit">CHECK AVAILABILITY</button>
-</form>
+<div class="menu-panel" id="menu" aria-hidden="true">
+  <nav class="big" aria-label="Mobile">
+    <a href="#rooms">Rooms &amp; Suites</a>
+    <a href="#experiences">Experiences</a>
+    <a href="#dining">Dining</a>
+    <a href="#meetings">Meetings/ Events</a>
+    <a href="#welcome">Art &amp; Heritage</a>
+    <a href="#rooms">Offers</a>
+  </nav>
+  <div class="meta"><a href="tel:+18444864499">+1 844 486 4499</a><a class="btn" href="#book">Book now</a></div>
+</div>
 
-<section class="section">
-  <div style="text-align:center;max-width:760px;margin:0 auto 2.5rem">
-    <p class="eyebrow">Welcome back home</p>
-    <h2>A calm house in the capital.</h2>
-    <p class="muted" style="margin:0 auto">For business, for family flying in, and for Jamaicans who want the city without a generic hotel. Reliable service, a rooftop pool, and art in the common rooms. Close to the Bob Marley Museum and Devon House.</p>
-  </div>
-  <div class="mosaic">
-    <div><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Room detail"></div>
-    <div><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80" alt="Hotel"></div>
-    <div><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80" alt="Art"></div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:0">
-  <div class="split">
-    <h2>Awards</h2>
-    <p class="muted">Recognition matters less than the breakfast, the quiet room, and the meeting that actually runs on time.</p>
-  </div>
-  <div class="awards">
-    <div class="award">CONDÉ NAST</div>
-    <div class="award">TRIPADVISOR</div>
-    <div class="award">SMALL LUXURY HOTELS</div>
-    <div class="award">USA TODAY</div>
-  </div>
-  <div class="rule"><i></i></div>
-</section>
-
-<section class="section" id="explore">
-  <p class="eyebrow">Explore Jamaica in Kingston</p>
-  <h2>The city is the reason.</h2>
-  <div class="hotel-grid" style="margin-top:1.4rem">
-    <div class="card"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=80" alt="Kingston light"><figcaption><h3>Around the hotel</h3><p>Bob Marley Museum, Devon House, and the business district close by.</p></figcaption></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80" alt="Breakfast"><figcaption><h3>The table</h3><p>A Jamaican breakfast guests mention, then a day in the city.</p></figcaption></div>
-  </div>
-</section>
-
-<section class="section" id="rooms" style="padding-top:1rem">
-  <div style="text-align:center">
-    <p class="eyebrow">Rooms & suites</p>
-    <h2>Stylish retreats</h2>
-    <p class="muted" style="margin:0 auto 1.4rem">Rooms, suites, and signature suites. Roman tubs. Enough quiet for a work morning and enough character that it still feels like Kingston.</p>
-  </div>
-  <div class="rooms">
-    <div class="room"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=80" alt="Room"><span>Rooms</span></div>
-    <div class="room"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" alt="Suite"><span>Suites</span></div>
-    <div class="room"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Signature suite"><span>Signature suites</span></div>
-  </div>
-</section>
-
-<section class="section" id="dining" style="padding-top:1rem">
-  <div class="feature">
-    <div class="pic"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=80" alt="Restaurant"></div>
-    <div>
-      <p class="eyebrow">Restaurants & bars</p>
-      <h2>Rocksteady, the pool, Strings.</h2>
-      <p class="muted">Dining is part of the stay, not a side note. Breakfast is the meal guests talk about. The rooftop is for the end of a Kingston day.</p>
-      <a class="linkline" href="#book">DISCOVER</a>
+<main>
+  <!-- Autoplay HD video -->
+  <section class="hero" aria-label="S Hotel Kingston">
+    <div class="hero-media" aria-hidden="true">
+      <video muted loop playsinline autoplay preload="none"><!-- <source src="video/s-hotel-kingston.mp4" type="video/mp4"> --></video>
+      <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=2200&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
     </div>
-  </div>
-  <div class="feature reverse">
-    <div class="pic"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=80" alt="Wellness"></div>
-    <div>
-      <p class="eyebrow">Spa & wellness</p>
-      <h2>A pause between meetings.</h2>
-      <p class="muted">The spa and the pool are there so the city stay does not feel like only a conference hotel.</p>
-      <a class="linkline" href="#book">DISCOVER</a>
-    </div>
-  </div>
-</section>
+    <div class="wrap hero-inner"><h1>The Heartbeat of Jamaica</h1></div>
+  </section>
 
-<section class="video-band" id="events" style="background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=2000&q=80')">
-  <div>
-    <p class="eyebrow">Meetings & events</p>
-    <h2 style="color:#fff">Gather in style.</h2>
-    <p style="max-width:48ch">Banqueting is a real part of this hotel. Meetings, receptions, and weddings have their own rooms, not a corner of the lobby.</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="contact">
-    <div>
-      <h3 class="serif" style="font-size:2rem;margin:0 0 .4rem">S Hotel Kingston</h3>
-      <p class="muted">New Kingston. A base for the city, not a resort dressed as one.</p>
-      <a class="linkline" href="https://maps.google.com/?q=S+Hotel+Kingston" target="_blank" rel="noreferrer">OPEN MAP</a>
-    </div>
-    <div>
-      <h3 class="serif" style="font-size:2rem;margin:0 0 .4rem">Room reservation</h3>
-      <p class="muted">Call +1 844 486 4499.</p>
-      <a class="linkline" href="tel:+18444864499">CONTACT US</a>
-    </div>
-  </div>
-</section>
-
-<section class="section faq" style="padding-top:0">
-  <h2>Questions, answered here.</h2>
-  <details open>
-    <summary>What should I know before booking?</summary>
-    <p>This is a city boutique hotel. It is strong on service, breakfast, and events. It is not a beach resort.</p>
-  </details>
-  <details>
-    <summary>Do you have meeting and banqueting facilities?</summary>
-    <p>Yes. Banqueting is one of Kingston's strengths, for meetings, receptions, and weddings.</p>
-  </details>
-  <details>
-    <summary>Is it suitable for business travellers?</summary>
-    <p>Yes. That is a core guest. The stay should feel professional and still Jamaican.</p>
-  </details>
-  <details>
-    <summary>Are children welcome?</summary>
-    <p>Families do stay. The feeling of the hotel is calm and grown, suited to business and to people visiting home.</p>
-  </details>
-  <details>
-    <summary>Is the hotel close to the Bob Marley Museum?</summary>
-    <p>Yes. The museum is a short trip from New Kingston, and the hotel keeps art in its own common rooms.</p>
-  </details>
-</section>
-
-<section class="section" style="padding-top:1rem">
-  <div class="news">
-    <div class="news-photo" style="background-image:url('https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=1200&q=80')"></div>
-    <form onsubmit="return false" style="padding:3rem 2.2rem">
-      <h2>Hear about Kingston</h2>
-      <input placeholder="Your name" aria-label="Your name">
-      <input type="email" placeholder="Your email" aria-label="Your email">
-      <div class="row">
-        <label class="fine"><input type="checkbox"> I agree to the privacy policy.</label>
-        <button class="go" type="submit">→</button>
+  <!-- Booking -->
+  <section class="booking wrap" id="book" aria-label="Check availability">
+    <form>
+      <div class="field">
+        <span class="label">Location</span>
+        <span class="val">Kingston</span>
+        <input type="hidden" name="hotel" value="Kingston">
       </div>
+      <div class="field dates">
+        <label class="label" for="b-dates">Check in / Check out</label>
+        <input id="b-dates" class="val" name="dates" value="29 OCT 26 - 29 OCT 26" data-dates>
+      </div>
+      <div class="field">
+        <label class="label" for="b-rooms">Rooms</label>
+        <select id="b-rooms" name="rooms">
+          <option>1 room: 1 guest</option>
+          <option selected>1 room: 2 guests</option>
+          <option>2 rooms: 4 guests</option>
+        </select>
+      </div>
+      <button class="btn" type="submit">Check availability</button>
     </form>
-  </div>
-</section>
+    <p class="status" role="status" aria-live="polite"></p>
+  </section>
 
-<footer>
-  <div>
-    <a class="brand" href="index.html" style="justify-content:flex-start"><span class="mark">S</span></a>
-    <h4>HOTELS</h4>
-    <a href="kingston.html">Kingston</a>
-    <a href="montego-bay.html">Montego Bay</a>
+  <!-- Welcome Back Home -->
+  <section class="sec wrap" id="welcome" aria-labelledby="welcome-title">
+    <div class="center reveal" style="margin-bottom:clamp(40px,6.4vw,116px)">
+      <p class="eyebrow">Jamaica's Heartbeat</p>
+      <h2 class="h2" id="welcome-title">Welcome Back Home</h2>
+      <p class="copy">A calm, polished house in New Kingston for business, for family flying in and for Jamaicans coming home. Reliable service, a glass-sided rooftop pool, Roman tubs and Jamaican art in the common rooms, with the Bob Marley Museum and Devon House close by.</p>
+    </div>
+    <div class="k-strip reveal">
+      <figure class="frame"><img src="images/ks-room-art.jpg" alt="" loading="lazy" style="object-position:30% 30%"></figure>
+      <figure class="frame"><img src="images/ks-entrance.jpg" alt="S Hotel Kingston" loading="lazy"></figure>
+      <figure class="frame"><img src="images/ks-wine.jpg" alt="" loading="lazy"></figure>
+      <figure class="frame"><img src="images/ks-room-standard.jpg" alt="" loading="lazy"></figure>
+    </div>
+    <svg class="swoosh" viewBox="0 0 1200 90" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12 C 300 40, 700 48, 1150 30"/><path d="M1120 8 L1158 30 L1118 52"/></svg>
+  </section>
+
+  <!-- Awards -->
+  <section class="sec wrap" aria-labelledby="awards-title">
+    <div class="head reveal">
+      <h2 class="h2" id="awards-title">Awards</h2>
+      <p class="copy">We are grateful for the recognition, but even more grateful for what inspires it. Meaningful experiences, genuine care and moments that stay with our guests long after they leave.</p>
+    </div>
+    <div class="rail tiles" id="awards-rail" data-rail>
+      <div class="tile"><b>Condé Nast Traveler</b><span>Readers' Choice</span></div>
+      <div class="tile"><b>Tripadvisor</b><span>Travellers' Choice</span></div>
+      <div class="tile"><b>Small Luxury Hotels of the World</b><span>Member</span></div>
+      <div class="tile"><b>USA Today</b><span>10Best</span></div>
+    </div>
+    <div class="progress" data-progress="awards-rail"><i></i></div>
+  </section>
+
+  <!-- Experiences -->
+  <section class="sec" id="experiences" aria-labelledby="xp-title">
+    <div class="wrap center reveal" style="margin-bottom:clamp(36px,5vw,96px)">
+      <h2 class="h2" id="xp-title">Experiences &amp; lifestyle</h2>
+      <p class="copy">Breakfast at Rocksteady, sundown on the rooftop pool and evenings at Strings Café &amp; Bar.</p>
+    </div>
+    <div class="k-xp reveal">
+      <div class="frame w-edge"><img src="images/ks-wine.jpg" alt="" loading="lazy"></div>
+      <div class="frame w-a"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"></div>
+      <div class="frame w-b"><img src="images/ks-strings.jpg" alt="" loading="lazy"></div>
+      <div class="frame w-a"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"></div>
+      <div class="frame w-c"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"></div>
+      <div class="frame w-edge"><img src="images/ks-room-art.jpg" alt="" loading="lazy"></div>
+    </div>
+    <div class="wrap"><div class="progress short"><i style="left:45%;width:10%"></i></div></div>
+  </section>
+
+  <!-- Explore Jamaica in Kingston -->
+  <section class="sec wrap" aria-labelledby="explore-title">
+    <h2 class="mega reveal" id="explore-title">Explore Jamaica in Kingston</h2>
+    <div class="duo-wrap reveal">
+      <div class="duo" id="explore-rail" data-rail>
+        <figure><div class="frame"><img src="images/ks-aerial.jpg" alt="New Kingston from above" loading="lazy"></div><figcaption class="cap">New Kingston, with the Blue Mountains behind.</figcaption></figure>
+        <figure><div class="frame"><img src="images/ks-entrance.jpg" alt="The hotel entrance" loading="lazy"></div><figcaption class="cap">Our front door, close to Devon House.</figcaption></figure>
+        <figure><div class="frame"><img src="images/ks-room-art.jpg" alt="" loading="lazy"></div><figcaption class="cap">Jamaican icons framed above the bed.</figcaption></figure>
+      </div>
+      <button class="sq" type="button" aria-controls="explore-rail" data-dir="1" aria-label="Next">→</button>
+    </div>
+  </section>
+
+  <!-- Rooms & Suites -->
+  <section class="sec wrap" id="rooms" aria-labelledby="rooms-title">
+    <div class="k-rooms">
+      <a class="room-card reveal" href="#book"><div class="frame shade"><img src="images/ks-room-standard.jpg" alt="" loading="lazy"><h3 class="on-img">Rooms</h3><span class="sq" aria-hidden="true">→</span></div></a>
+      <div class="mid">
+        <div class="center reveal">
+          <p class="eyebrow">Rooms &amp; Suites</p>
+          <h2 class="h2" id="rooms-title">Stylish Retreats</h2>
+          <p class="copy">Minimal rooms with Roman tubs, a yoga mat and guide, and fast WiFi for the working day.</p>
+        </div>
+        <a class="room-card reveal" href="#book"><div class="frame shade"><img src="images/ks-room-suite.jpg" alt="" loading="lazy"><h3 class="on-img">Suites</h3><span class="sq" aria-hidden="true">→</span></div></a>
+      </div>
+      <a class="room-card r3 reveal" href="#book"><div class="frame shade"><img src="images/ks-room-signature.jpg" alt="" loading="lazy"><h3 class="on-img">Signature Suites</h3><span class="sq" aria-hidden="true">→</span></div></a>
+    </div>
+  </section>
+
+  <!-- Restaurant & Bars / Spa & Wellness -->
+  <section class="sec wrap" id="dining" aria-label="Restaurant and bars, spa and wellness">
+    <div class="dine">
+      <div class="col">
+        <figure class="frame a reveal"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80" alt="" loading="lazy"></figure>
+        <div class="spa-text reveal">
+          <h2 class="h2">Spa &amp; Wellness</h2>
+          <p class="copy">A treatment, a swim in the rooftop pool, or the yoga mat already waiting in your room.</p>
+          <a class="link" href="tel:+18444864499">Discover &gt;</a>
+        </div>
+        <figure class="frame c reveal"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80" alt="" loading="lazy"></figure>
+      </div>
+      <div class="col">
+        <div class="text-a reveal">
+          <h2 class="h2">Restaurant &amp; Bars</h2>
+          <p class="copy">Continental classics at Rocksteady, Blue Mountain coffee and tapas at Strings Café &amp; Bar.</p>
+          <a class="link" href="tel:+18444864499">Discover</a>
+        </div>
+        <figure class="frame b reveal"><img src="images/ks-strings.jpg" alt="" loading="lazy"></figure>
+        <figure class="frame d reveal"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meetings & Events -->
+  <section class="sec wrap" id="meetings" aria-labelledby="meetings-title">
+    <div class="events">
+      <div class="frame band reveal">
+        <!-- Meeting / Event Hall Video: add <video autoplay muted loop playsinline> here -->
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
+      </div>
+      <div class="events-below">
+        <div class="events-card reveal">
+          <img src="images/ks-entrance.jpg" alt="" loading="lazy">
+          <p class="eyebrow">Meetings &amp; Events</p>
+          <h2 id="meetings-title">Gather in Style</h2>
+        </div>
+        <div class="events-text reveal">
+          <p class="copy">Banqueting is a strength here: meetings, receptions and weddings with their own rooms.</p>
+          <a class="link" href="tel:+18444864499">Discover &gt;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="sec wrap" aria-label="Contact">
+    <div class="contact-row reveal">
+      <div>
+        <h3>S Hotel Kingston</h3>
+        <a class="link" href="https://maps.google.com/?q=S+Hotel+Kingston" target="_blank" rel="noreferrer">Open map &gt;</a>
+        <p>363 Cocoanut Row, Palm Beach, FL 33480, United States US toll free +1 833 549 5511 +1 (561) 270-1500</p>
+      </div>
+      <div class="c-right">
+        <h3>Room Reservation</h3>
+        <a class="link" href="tel:+18444864499">Contact us &gt;</a>
+        <p>You can contact our team at reservations.vineta@oetkerhotels.com or over the phone: +1 (561) 813-8027</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec wrap faq" aria-labelledby="faq-title">
+    <h2 class="h2 faq-title reveal" id="faq-title">Frequently Asked Questions</h2>
+    <div class="reveal">
+      <details><summary>What should I know about S Hotel Kingston before booking?</summary><p>S Hotel Kingston is a boutique city hotel in New Kingston, strong on service, breakfast and events. It is not a beach resort.</p></details>
+      <details><summary>Do you have meeting and banqueting facilities?</summary><p>Yes. Banqueting is one of the hotel's strengths, with rooms for meetings, receptions and weddings.</p></details>
+      <details><summary>Is the hotel suitable for business travellers?</summary><p>Yes. Quiet rooms, free WiFi and wired internet, and the business district close by.</p></details>
+      <details><summary>Are children allowed or children friendly ?</summary><p>Families are welcome. Call the team to talk through the right room for your family.</p></details>
+      <details><summary>Is the hotel close to the Bob Marley Museum?</summary><p>Yes. The museum is a short trip from New Kingston, with Devon House nearby too.</p></details>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="sec wrap" aria-labelledby="news-title">
+    <div class="news reveal">
+      <div class="frame"><img src="images/ks-aerial.jpg" alt="" loading="lazy"></div>
+      <div class="news-body">
+        <h2 class="h2" id="news-title">Sign up to the S Hotels Jamaica Newsletter</h2>
+        <form class="signup">
+          <input class="box" name="name" placeholder="Your Name" aria-label="Your Name" autocomplete="name">
+          <input class="box" name="email" type="email" placeholder="Your Email" aria-label="Your Email" autocomplete="email" required>
+          <div class="hear" id="hear">I want to hear about</div>
+          <fieldset class="chips" aria-labelledby="hear">
+            <label><input type="radio" name="list" value="both" checked><span>Both</span></label>
+            <label><input type="radio" name="list" value="kingston"><span>Kingston</span></label>
+            <label><input type="radio" name="list" value="montego-bay"><span>Montego Bay</span></label>
+          </fieldset>
+          <div class="form-end">
+            <label class="consent"><input type="checkbox" required> I agree to the Privacy Policy.</label>
+            <button class="go" type="submit" aria-label="Sign up">→</button>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div class="c1">
+      <span class="mark" aria-hidden="true">S</span>
+      <h4>Hotels</h4>
+      <ul class="caps">
+        <li><a href="kingston.html">Kingston</a></li>
+        <li><a href="montego-bay.html">Montego Bay</a></li>
+        <li><a href="index.html#foundation">Foundation</a></li>
+      </ul>
+      <p class="copy-r">©2026</p>
+    </div>
+    <div class="c2">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="index.html">Contact</a></li>
+        <li><a href="index.html#story">About Us</a></li>
+        <li><a href="index.html">Careers</a></li>
+        <li><a href="index.html">Media</a></li>
+        <li><a href="index.html">Terms &amp; Policies</a></li>
+        <li><a href="index.html">Cookie Settings</a></li>
+      </ul>
+    </div>
+    <div class="c3">
+      <h4>Follow Us</h4>
+      <ul class="out">
+        <li><a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
+        <li><a href="https://x.com" target="_blank" rel="noreferrer">Twitter/ X</a></li>
+      </ul>
+    </div>
   </div>
-  <div>
-    <h4>LINKS</h4>
-    <a href="index.html">About us</a>
-    <a href="tel:+18444864499">Contact</a>
-  </div>
-  <div>
-    <h4>FOLLOW US</h4>
-    <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-    <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
-  </div>
-  <div><h4>THIS PAGE</h4><p>Kingston direction for review with Miles.</p></div>
-  <p class="copy">© 2026 S Hotels Jamaica</p>
 </footer>
+
+<script src="site.js"></script>
 </body>
 </html>

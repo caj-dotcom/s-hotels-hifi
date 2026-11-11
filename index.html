@@ -4,247 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S Hotels Jamaica</title>
-<script>document.documentElement.classList.add("js")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:opsz,wght@18..144,400;18..144,700;18..144,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-parent">
-
-<header class="site-header">
-  <div class="mast-top">
-    <a class="brand" href="index.html" aria-label="S Hotels Jamaica"><span class="mark">S</span><span class="word">Hotels Jamaica</span></a>
-  </div>
-  <div class="mast-row">
-    <div class="hotel-menu">
-      <button type="button" aria-expanded="false" aria-controls="hotel-panel">Our Hotels</button>
-      <div class="hotel-panel" id="hotel-panel" hidden>
-        <a href="kingston.html"><img src="images/ks-entrance.jpg" alt="">S Hotel Kingston</a>
-        <a href="montego-bay.html"><img src="images/mb-beach-umbrellas.jpg" alt="">S Hotel Montego Bay</a>
-      </div>
-    </div>
-    <nav class="nav-links" aria-label="Main">
-      <a href="#story">Our Story</a>
-      <a href="#experiences">Experiences</a>
-      <a href="#foundation">Charity Foundation</a>
-      <a href="#awards">Awards &amp; Partners</a>
-    </nav>
-    <div class="nav-end">
-      <a class="book" href="#book">Book now<span class="tag">No fees</span></a>
-      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><b>Menu</b><i></i></button>
-    </div>
-  </div>
-</header>
-
-<div class="menu-panel" id="menu" aria-hidden="true">
-  <nav class="big" aria-label="Mobile">
-    <a href="kingston.html">S Hotel Kingston</a>
-    <a href="montego-bay.html">S Hotel Montego Bay</a>
-    <a href="#story">Our Story</a>
-    <a href="#experiences">Experiences</a>
-    <a href="#foundation">Charity Foundation</a>
-    <a href="#awards">Awards &amp; Partners</a>
-  </nav>
-  <div class="meta"><a class="btn" href="#book">Book now</a></div>
+<header class="site-header"><div class="page">
+<a class="a logo" style="--x:766;--y:50;--w:275;" href="index.html" aria-label="S Hotels Jamaica"><img src="images/s-mark.png" alt=""><span>HOTELS JAMAICA</span></a>
+<div class="a rule" style="--x:2;--y:125;--w:1804;"></div>
+<div class="a hotel-menu" style="--x:58;--y:156;--w:227;"><button type="button" aria-expanded="false" aria-controls="hotel-panel">Our Hotels</button><div class="hotel-panel" id="hotel-panel" hidden><a href="kingston.html"><img src="images/ks-entrance.jpg" alt="">S Hotel Kingston</a><a href="montego-bay.html"><img src="images/mb-beach-umbrellas.jpg" alt="">S Hotel Montego Bay</a></div></div>
+<nav class="a nav m24" style="--x:519;--y:156;--w:769;" aria-label="Main"><a href="#story">Our Story</a><a href="#experiences">Experiences</a><a href="#foundation">Charity Foundation</a><a href="#awards">Awards &amp; Partners</a></nav>
+<a class="a book hh" style="--x:1603;--y:144;--w:161;--h:58;" href="#book">BOOK NOW</a>
+<span class="a tag hh" style="--x:1682;--y:188;--w:82;--h:28;">No fees</span>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><i></i></button>
+</div></header>
+<div class="menu-panel" id="menu" aria-hidden="true"><nav class="big" aria-label="Mobile"><a href="#story">Our Story</a><a href="#experiences">Experiences</a><a href="#foundation">Charity Foundation</a><a href="#awards">Awards &amp; Partners</a><a href="kingston.html">S Hotel Kingston</a><a href="montego-bay.html">S Hotel Montego Bay</a></nav><div class="meta"><a class="btn-dark" href="#book">Book now</a></div></div>
+<main class="page" style="--ph:12048">
+<section class="a hero full hh" style="--x:0;--y:0;--w:1808;--h:1392;" aria-label="Hero"><div class="hero-media" aria-hidden="true"><video muted loop playsinline autoplay preload="none"><!-- add the hotel film: <source src="video/hero.mp4" type="video/mp4"> --></video><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=80" alt=""><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy"></div><h1 class="a t160 hero-title" style="--x:58;--y:1103;--w:1393;">S  HOTELS  JAMAICA</h1></section>
+<form class="a booking hh" style="--x:70;--y:1472;--w:1668;--h:128;" id="book"><div class="f i24 " style="left:calc(182 * var(--u));top:calc(28 * var(--u))"><span class="lab" style="display:block">LOCATION</span><select name="hotel" aria-label="Location"><option value="">PLEASE SELECT</option><option value="Kingston">KINGSTON</option><option value="Montego Bay">MONTEGO BAY</option></select></div><div class="f i24 dates" style="left:calc(650.6 * var(--u));top:calc(28 * var(--u))"><label class="lab" style="display:block" for="b-dates">CHECK IN / CHECK OUT</label><input id="b-dates" class="val" name="dates" value="29 OCT 26 - 29 OCT 26" data-dates></div><div class="f i24 " style="left:calc(1078 * var(--u));top:calc(28 * var(--u))"><label class="lab" style="display:block" for="b-rooms">ROOMS</label><select id="b-rooms" name="rooms"><option>1 ROOM: 1 GUEST</option><option selected>1 ROOM: 2 GUESTS</option><option>2 ROOMS: 4 GUESTS</option></select></div><button class="check" type="submit" style="left:calc(1338 * var(--u));top:calc(32 * var(--u));width:calc(291 * var(--u));height:calc(64 * var(--u))">CHECK AVAILABILITY</button></form><p class="a status i16" style="--x:70;--y:1612;--w:900;" role="status" aria-live="polite"></p>
+<h2 class="a t64 gap" style="--x:62;--y:1770;--w:321;" id="hotels">Our Hotels</h2>
+<p class="a i24" style="--x:1001;--y:1739;--w:736;">Distinctive and extraordinary properties for every taste, evoking a sense of place in every detail</p>
+<a class="a uline" style="--x:1009;--y:1838;" href="#hotels">COMPARE HOTELS &gt;</a>
+<a class="a img hh" style="--x:62;--y:1915;--w:808.7;--h:768;" href="kingston.html"><img src="images/ks-entrance.jpg" alt="S Hotel Kingston" loading="lazy"></a>
+<h3 class="a t40" style="--x:62;--y:2715;--w:600;"><a href="kingston.html">S Hotel Kingston</a></h3>
+<p class="a i24 mute" style="--x:62;--y:2786;--w:300;">24 ROOMS &amp; 5 SUITES</p>
+<a class="a img hh" style="--x:941;--y:1915;--w:808.7;--h:768;" href="montego-bay.html"><img src="images/mb-beach-umbrellas.jpg" alt="S Hotel Montego Bay" loading="lazy"><span class="sq" style="position:absolute;left:calc(726 * var(--u));top:calc(352 * var(--u));width:calc(64 * var(--u));height:calc(64 * var(--u))" aria-hidden="true">→</span></a>
+<h3 class="a t40" style="--x:941;--y:2715;--w:600;"><a href="montego-bay.html">S Hotel Montego Bay</a></h3>
+<p class="a i24 mute" style="--x:941;--y:2786;--w:300;">24 ROOMS &amp; 5 SUITES</p>
+<section class="a panel gap hh" style="--x:904;--y:3180;--w:904;--h:951;" id="story"><p class="a i16b mute c" style="--x:424;--y:258;--w:146;">OUR STORY</p><h2 class="a t56 c" style="--x:203;--y:282;--w:588;">A Stay Beyond Your Expectations</h2><p class="a i24 c" style="--x:209;--y:467;--w:576;">We at S Hotels Jamaica blend comfort with local flair, offering stays that reflect the vibrant soul of the island.</p><a class="a btn-dark hh" style="--x:416;--y:634;--w:161;--h:58;" href="#experiences">DISCOVER</a></section>
+<div class="a img full story-img hh" style="--x:0;--y:3180;--w:1001;--h:951;"><img src="images/mb-team.jpg" alt="The S Hotels team" loading="lazy"></div>
+<p class="a i16b mute gap" style="--x:62;--y:4500;--w:200;" id="experiences">EXPERIENCES</p>
+<h2 class="a t64" style="--x:62;--y:4542;--w:642;">Limited amenities of both Hotels</h2>
+<p class="a i24" style="--x:62;--y:4770;--w:736;">A few things each house does with care, from the beach and the art to the table and the spa.</p>
+<p class="a t40" style="--x:62;--y:4976;--w:736;">S Hotel Montego Bay</p>
+<p class="a i24 mute" style="--x:62;--y:5061;--w:736;"><a href="kingston.html">S Hotel Kingston</a></p>
+<a class="a uline" style="--x:62;--y:5180;" href="montego-bay.html">DISCOVER</a>
+<a class="a img shade hh" style="--x:1001;--y:4482;--w:729;--h:830.6;" href="montego-bay.html"><img src="images/mb-beach-walk.jpg" alt="" loading="lazy"><h3 class="lbl t48" style="left:calc(60 * var(--u));top:calc(41.6 * var(--u));width:calc(570 * var(--u))">Direct access to Doctor’s Cave Beach</h3></a>
+<a class="a img shade hh" style="--x:1001;--y:5361.8;--w:729;--h:830.6;" href="montego-bay.html"><img src="images/mb-doctor-bird.jpg" alt="" loading="lazy"><h3 class="lbl t48" style="left:calc(60 * var(--u));top:calc(41.6 * var(--u));width:calc(570 * var(--u))">Arts &amp; Heritage</h3></a>
+<a class="a img shade hh" style="--x:1001;--y:6241.6;--w:729;--h:830.6;" href="montego-bay.html"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"><h3 class="lbl t48" style="left:calc(60 * var(--u));top:calc(41.6 * var(--u));width:calc(570 * var(--u))">All-inclusive dining and drinks</h3></a>
+<a class="a img shade hh" style="--x:1001;--y:7121.4;--w:729;--h:830.6;" href="montego-bay.html"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"><h3 class="lbl t48" style="left:calc(60 * var(--u));top:calc(41.6 * var(--u));width:calc(570 * var(--u))">Irie Spa and Baths</h3></a>
+<h2 class="a t64 nw gap" style="--x:70;--y:8352;--w:736;" id="awards">Awards &amp; Partners</h2>
+<p class="a i24" style="--x:864;--y:8352;--w:866;">We are grateful for the recognition, but even more grateful for what inspires it. Meaningful experiences, genuine care and moments that stay with our guests long after they leave.</p>
+<div class="a rail tiles hh" style="--x:76;--y:8535;--w:1732;--h:448;" id="awards-rail" data-rail><div class="tile"><b>Condé Nast Traveler</b><span>Readers' Choice</span></div><div class="tile"><b>Tripadvisor</b><span>Travellers' Choice</span></div><div class="tile"><b>Small Luxury Hotels of the World</b><span>Member</span></div><div class="tile"><b>USA Today</b><span>10Best</span></div></div>
+<div class="a prog" style="--x:76;--y:9109;--w:1654;" data-progress="awards-rail"><i style="width:57%"></i></div>
+<h2 class="a t64 nw gap" style="--x:70;--y:9383;--w:850;">What Our Guests Say</h2>
+<div class="arrows-row">
+<button class="a sq grey hh" style="--x:1560;--y:9399;--w:64;--h:64;" type="button" aria-controls="reviews" data-dir="-1" aria-label="Previous">&lt;</button>
+<button class="a sq grey hh" style="--x:1656;--y:9399;--w:64;--h:64;" type="button" aria-controls="reviews" data-dir="1" aria-label="Next">&gt;</button>
 </div>
-
-<main>
-  <!-- Autoplay HD video -->
-  <section class="hero" aria-label="S Hotels Jamaica">
-    <div class="hero-media" aria-hidden="true">
-      <video muted loop playsinline autoplay preload="none"><!-- <source src="video/s-hotels-jamaica.mp4" type="video/mp4"> --></video>
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2200&q=80" alt="" loading="lazy">
-    </div>
-    <div class="wrap hero-inner"><h1 class="caps">S Hotels Jamaica</h1></div>
-  </section>
-
-  <!-- Booking -->
-  <section class="booking wrap" id="book" aria-label="Check availability">
-    <form>
-      <div class="field">
-        <label class="label" for="b-loc">Location</label>
-        <select id="b-loc" name="hotel">
-          <option value="">Please select</option>
-          <option value="Kingston">Kingston</option>
-          <option value="Montego Bay">Montego Bay</option>
-        </select>
-      </div>
-      <div class="field dates">
-        <label class="label" for="b-dates">Check in / Check out</label>
-        <input id="b-dates" class="val" name="dates" value="29 OCT 26 - 29 OCT 26" data-dates>
-      </div>
-      <div class="field">
-        <label class="label" for="b-rooms">Rooms</label>
-        <select id="b-rooms" name="rooms">
-          <option>1 room: 1 guest</option>
-          <option selected>1 room: 2 guests</option>
-          <option>2 rooms: 4 guests</option>
-        </select>
-      </div>
-      <button class="btn" type="submit">Check availability</button>
-    </form>
-    <p class="status" role="status" aria-live="polite"></p>
-  </section>
-
-  <!-- Our Hotels -->
-  <section class="sec wrap p-hotels" id="hotels" aria-labelledby="hotels-title">
-    <div class="head reveal">
-      <h2 class="h2" id="hotels-title">Our Hotels</h2>
-      <div>
-        <p class="copy">Distinctive and extraordinary properties for every taste, evoking a sense of place in every detail</p>
-        <a class="link" href="#hotels">Compare hotels &gt;</a>
-      </div>
-    </div>
-    <div class="hotel-pair">
-      <a class="reveal" href="kingston.html">
-        <div class="frame"><img src="images/ks-entrance.jpg" alt="S Hotel Kingston" loading="lazy"></div>
-        <h3>S Hotel Kingston</h3>
-        <p class="meta">24 Rooms &amp; 5 Suites</p>
-      </a>
-      <a class="reveal" href="montego-bay.html">
-        <div class="frame"><img src="images/mb-beach-umbrellas.jpg" alt="S Hotel Montego Bay" loading="lazy"><span class="sq" aria-hidden="true">→</span></div>
-        <h3>S Hotel Montego Bay</h3>
-        <p class="meta">24 Rooms &amp; 5 Suites</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- Our Story -->
-  <section class="sec story" id="story" aria-labelledby="story-title">
-    <div class="frame"><img src="images/mb-team.jpg" alt="The S Hotels team" loading="lazy"></div>
-    <div class="story-body reveal">
-      <p class="eyebrow">Our Story</p>
-      <h2 class="h2" id="story-title">A Stay Beyond Your Expectations</h2>
-      <p class="copy">We at S Hotels Jamaica blend comfort with local flair, offering stays that reflect the vibrant soul of the island.</p>
-      <a class="btn" href="#experiences">Discover</a>
-    </div>
-  </section>
-
-  <!-- Experiences -->
-  <section class="sec wrap" id="experiences" aria-labelledby="exp-title">
-    <div class="exp-grid">
-      <div class="exp-side reveal">
-        <p class="eyebrow">Experiences</p>
-        <h2 class="h2" id="exp-title">Limited amenities of both Hotels</h2>
-        <p class="copy">A few things each house does with care, from the beach and the art to the table and the spa.</p>
-        <div class="hotels">
-          <span class="now">S Hotel Montego Bay</span>
-          <a href="kingston.html">S Hotel Kingston</a>
-        </div>
-        <a class="link" href="montego-bay.html">Discover</a>
-      </div>
-      <div class="exp-stack">
-        <a class="reveal" href="montego-bay.html"><div class="frame shade"><img src="images/mb-beach-walk.jpg" alt="" loading="lazy"><h3 class="on-img">Direct access to Doctor's Cave Beach</h3></div></a>
-        <a class="reveal" href="montego-bay.html"><div class="frame shade"><img src="images/mb-doctor-bird.jpg" alt="" loading="lazy"><h3 class="on-img">Arts &amp; Heritage</h3></div></a>
-        <a class="reveal" href="montego-bay.html"><div class="frame shade"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80" alt="" loading="lazy"><h3 class="on-img">All-inclusive dining and drinks</h3></div></a>
-        <a class="reveal" href="montego-bay.html"><div class="frame shade"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80" alt="" loading="lazy"><h3 class="on-img">Irie Spa and Baths</h3></div></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Awards & Partners -->
-  <section class="sec wrap" id="awards" aria-labelledby="awards-title">
-    <div class="head reveal">
-      <h2 class="h2" id="awards-title">Awards &amp; Partners</h2>
-      <p class="copy">We are grateful for the recognition, but even more grateful for what inspires it. Meaningful experiences, genuine care and moments that stay with our guests long after they leave.</p>
-    </div>
-    <div class="rail tiles" id="awards-rail" data-rail>
-      <div class="tile"><b>Condé Nast Traveler</b><span>Readers' Choice</span></div>
-      <div class="tile"><b>Tripadvisor</b><span>Travellers' Choice</span></div>
-      <div class="tile"><b>Small Luxury Hotels of the World</b><span>Member</span></div>
-      <div class="tile"><b>USA Today</b><span>10Best</span></div>
-    </div>
-    <div class="progress" data-progress="awards-rail"><i></i></div>
-  </section>
-
-  <!-- What Our Guests Say -->
-  <section class="sec wrap" aria-labelledby="guests-title">
-    <div class="head reveal" style="align-items:end">
-      <h2 class="h2" id="guests-title">What Our Guests Say</h2>
-      <div style="justify-self:end;display:flex;gap:1.5rem">
-        <button class="sq" type="button" aria-controls="reviews" data-dir="-1" aria-label="Previous">&lt;</button>
-        <button class="sq" type="button" aria-controls="reviews" data-dir="1" aria-label="Next">&gt;</button>
-      </div>
-    </div>
-    <div class="reviews-wrap reveal">
-      <div class="rating">
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        <p class="score">4.9 Rating</p>
-        <div class="who"><span class="avs" aria-hidden="true"><i></i><i></i><i></i></span><span><b>15k+</b>Tripadvisor</span></div>
-      </div>
-      <div class="rail reviews" id="reviews" data-rail>
-        <blockquote class="review"><span class="q" aria-hidden="true">“</span><p>Loved the staff members. Made me feel like I was at my home away from home. Richard was a wonderful bartender and the hospitality from the servers was unprecedented. I will definitely be back!</p><cite>- Jennifer H.</cite></blockquote>
-        <blockquote class="review"><span class="q" aria-hidden="true">“</span><p>Loved the staff members. Made me feel like I was at my home away from home. Richard was a wonderful bartender and the hospitality from the servers was unprecedented. I will definitely be back!</p><cite>- Jennifer H.</cite></blockquote>
-        <blockquote class="review"><span class="q" aria-hidden="true">“</span><p>Loved the staff members. Made me feel like I was at my home away from home. Richard was a wonderful bartender and the hospitality from the servers was unprecedented. I will definitely be back!</p><cite>- Jennifer H.</cite></blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="sec wrap" aria-labelledby="news-title">
-    <div class="news reveal">
-      <div class="frame"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80" alt="" loading="lazy"></div>
-      <div class="news-body">
-        <h2 class="h2" id="news-title">Sign up to the S Hotels Jamaica Newsletter</h2>
-        <form class="signup">
-          <input class="box" name="name" placeholder="Your Name" aria-label="Your Name" autocomplete="name">
-          <input class="box" name="email" type="email" placeholder="Your Email" aria-label="Your Email" autocomplete="email" required>
-          <div class="hear" id="hear">I want to hear about</div>
-          <fieldset class="chips" aria-labelledby="hear">
-            <label><input type="radio" name="list" value="both" checked><span>Both</span></label>
-            <label><input type="radio" name="list" value="kingston"><span>Kingston</span></label>
-            <label><input type="radio" name="list" value="montego-bay"><span>Montego Bay</span></label>
-          </fieldset>
-          <div class="form-end">
-            <label class="consent"><input type="checkbox" required> I agree to the Privacy Policy.</label>
-            <button class="go" type="submit" aria-label="Sign up">→</button>
-          </div>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </div>
-  </section>
+<div class="a reviews-wrap hh" style="--x:69;--y:9516;--w:1658;--h:496;"><div class="rating"><div class="stars" style="left:calc(41 * var(--u));top:calc(34 * var(--u))"><svg viewBox="0 0 24 22" aria-hidden="true"><path fill="#1e1e1e" d="M12 0l3.1 7.3 7.9.7-6 5.2 1.8 7.8L12 16.9 5.2 21l1.8-7.8-6-5.2 7.9-.7z"/></svg><svg viewBox="0 0 24 22" aria-hidden="true"><path fill="#1e1e1e" d="M12 0l3.1 7.3 7.9.7-6 5.2 1.8 7.8L12 16.9 5.2 21l1.8-7.8-6-5.2 7.9-.7z"/></svg><svg viewBox="0 0 24 22" aria-hidden="true"><path fill="#1e1e1e" d="M12 0l3.1 7.3 7.9.7-6 5.2 1.8 7.8L12 16.9 5.2 21l1.8-7.8-6-5.2 7.9-.7z"/></svg><svg viewBox="0 0 24 22" aria-hidden="true"><path fill="#1e1e1e" d="M12 0l3.1 7.3 7.9.7-6 5.2 1.8 7.8L12 16.9 5.2 21l1.8-7.8-6-5.2 7.9-.7z"/></svg><svg viewBox="0 0 24 22" aria-hidden="true"><path fill="#1e1e1e" d="M12 0l3.1 7.3 7.9.7-6 5.2 1.8 7.8L12 16.9 5.2 21l1.8-7.8-6-5.2 7.9-.7z"/></svg></div><p class="t40" style="left:calc(39 * var(--u));top:calc(84 * var(--u))">4.9 Rating</p><div class="avs" style="left:calc(23.6 * var(--u));top:calc(397 * var(--u))"><i></i><i></i><i></i></div><p class="t40 blk" style="left:calc(205.7 * var(--u));top:calc(393 * var(--u))">15k+</p><p class="i24" style="left:calc(205.7 * var(--u));top:calc(439.5 * var(--u))">Tripadvisor</p></div><div class="rail reviews" id="reviews" data-rail><blockquote class="review"><span class="q" aria-hidden="true">“</span><p class="i24">Loved the staff members. Made me feel like I was at my home away from home. Richard was a wonderful bartender and the hospitality from the servers was unprecedented. I will definitely be back!<cite>- Jennifer H.</cite></p></blockquote><blockquote class="review"><span class="q" aria-hidden="true">“</span><p class="i24">Loved the staff members. Made me feel like I was at my home away from home. Richard was a wonderful bartender and the hospitality from the servers was unprecedented. I will definitely be back!<cite>- Jennifer H.</cite></p></blockquote><blockquote class="review"><span class="q" aria-hidden="true">“</span><p class="i24">Loved the staff members. Made me feel like I was at my home away from home. Richard was a wonderful bartender and the hospitality from the servers was unprecedented. I will definitely be back!<cite>- Jennifer H.</cite></p></blockquote></div></div>
+<div class="a img gap hh" style="--x:83;--y:10364;--w:822;--h:929;"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy"></div>
+<form class="a panel newsletter-panel signup hh" style="--x:877;--y:10364;--w:850;--h:929;"><h2 class="a t40" style="--x:94;--y:90.5;--w:590;">Sign up to the S Hotels Jamaica Newsletter</h2><input class="a field-box hh" style="--x:94;--y:304;--w:690;--h:80;" name="name" placeholder="Your Name" aria-label="Your Name" autocomplete="name"><input class="a field-box hh" style="--x:94;--y:416;--w:690;--h:80;" name="email" type="email" placeholder="Your Email" aria-label="Your Email" autocomplete="email" required><div class="a field-box mute hh" style="--x:94;--y:528;--w:690;--h:80;" id="hear">I want to hear about</div><div class="chips-row" role="radiogroup" aria-labelledby="hear"><label class="a chip hh" style="--x:94;--y:624;--w:82;--h:48;"><input type="radio" name="list" value="both" checked><span>Both</span></label><label class="a chip hh" style="--x:192;--y:624;--w:114;--h:48;"><input type="radio" name="list" value="kingston"><span>Kingston</span></label><label class="a chip hh" style="--x:322;--y:624;--w:144;--h:48;"><input type="radio" name="list" value="montego-bay"><span>Montego Bay</span></label></div><label class="a check-box i16" style="--x:96;--y:836;--w:400;"><input type="checkbox" required> <span>I agree to the <u>Privacy Policy.</u></span></label><button class="a go hh" style="--x:720;--y:816;--w:64;--h:64;" type="submit" aria-label="Sign up">→</button><p class="a form-status i16" style="--x:94;--y:872;--w:600;" role="status" aria-live="polite"></p></form>
+<footer><div class="a rule full" style="--x:4.7;--y:11484;--w:1800;"></div>
+<div class="a vrule" style="--x:502;--y:11485;height:calc(564 * var(--u));"></div>
+<div class="a img-plain gap" style="--x:145;--y:11555.4;--w:44;"><img src="images/s-mark.png" alt="S Hotels Jamaica" style="width:100%"></div>
+<p class="a i40b nw" style="--x:212;--y:11535.4;--w:200;">HOTELS</p>
+<div class="foot-col">
+<p class="a m24 caps foot" style="--x:147;--y:11667.4;--w:200;"><a href="kingston.html">Kingston</a></p>
+<p class="a m24 caps foot" style="--x:147;--y:11715.9;--w:224;"><a href="montego-bay.html">Montego Bay</a></p>
+<p class="a m24 caps foot" style="--x:147;--y:11764.4;--w:200;"><a href="index.html#foundation" id="foundation">Foundation</a></p>
+</div>
+<p class="a i24b label gap" style="--x:616;--y:11545.4;--w:160;">LINKS</p>
+<div class="foot-col">
+<p class="a m24 foot" style="--x:616;--y:11605.9;--w:240;"><a href="index.html">Contact</a></p>
+<p class="a m24 foot" style="--x:616;--y:11654.4;--w:240;"><a href="index.html#story">About Us</a></p>
+<p class="a m24 foot" style="--x:616;--y:11703.4;--w:240;"><a href="index.html">Careers</a></p>
+<p class="a m24 foot" style="--x:616;--y:11752.4;--w:240;"><a href="index.html">Media</a></p>
+<p class="a m24 foot" style="--x:616;--y:11803.9;--w:240;"><a href="index.html">Terms &amp; Policies</a></p>
+<p class="a m24 foot" style="--x:616;--y:11864.9;--w:240;"><a href="index.html">Cookie Settings</a></p>
+</div>
+<p class="a i24b label gap" style="--x:1060;--y:11545.4;--w:200;">FOLLOW US</p>
+<div class="foot-col">
+<p class="a m24 foot" style="--x:1060;--y:11619.4;--w:220;"><a class="out" href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a></p>
+<p class="a m24 foot" style="--x:1060;--y:11667.4;--w:220;"><a class="out" href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></p>
+<p class="a m24 foot" style="--x:1060;--y:11715.4;--w:220;"><a class="out" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></p>
+<p class="a m24 foot" style="--x:1060;--y:11763.4;--w:220;"><a class="out" href="https://x.com" target="_blank" rel="noreferrer">Twitter/ X</a></p>
+</div>
+<p class="a m24 label" style="--x:147;--y:11900.9;--w:120;">©2026</p></footer>
 </main>
-
-<footer class="site-footer">
-  <div class="wrap foot">
-    <div class="c1">
-      <span class="mark" aria-hidden="true">S</span>
-      <h4>Hotels</h4>
-      <ul class="caps">
-        <li><a href="kingston.html">Kingston</a></li>
-        <li><a href="montego-bay.html">Montego Bay</a></li>
-        <li><a href="index.html" id="foundation">Foundation</a></li>
-      </ul>
-      <p class="copy-r">©2026</p>
-    </div>
-    <div class="c2">
-      <h4>Links</h4>
-      <ul>
-        <li><a href="index.html">Contact</a></li>
-        <li><a href="#story">About Us</a></li>
-        <li><a href="index.html">Careers</a></li>
-        <li><a href="index.html">Media</a></li>
-        <li><a href="index.html">Terms &amp; Policies</a></li>
-        <li><a href="index.html">Cookie Settings</a></li>
-      </ul>
-    </div>
-    <div class="c3">
-      <h4>Follow Us</h4>
-      <ul class="out">
-        <li><a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
-        <li><a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
-        <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
-        <li><a href="https://x.com" target="_blank" rel="noreferrer">Twitter/ X</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
 <script src="site.js"></script>
 </body>
 </html>

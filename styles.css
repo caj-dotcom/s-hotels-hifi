@@ -122,9 +122,18 @@ h2 { font-size: clamp(2.8rem, 5vw, 4.6rem); line-height: 0.95; margin: 0 0 1rem;
 .hotel-grid { grid-template-columns: 1fr 1fr; }
 .card { position: relative; min-height: 520px; overflow: hidden; background: #222; color: #fff; }
 .card.tall { min-height: 640px; }
-.card figcaption {
-  position: absolute; left: 1.4rem; right: 1.4rem; bottom: 1.4rem;
+.card img, .label-card img, .room img, .story-photo img, .pic img, .mosaic img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
 }
+.card::before, .label-card::before, .room::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, rgba(12,9,7,.72), rgba(12,9,7,.05) 55%);
+}
+.card figcaption, .label-card span, .room span { z-index: 2; }
+.story-photo, .pic, .mosaic > div { position: relative; overflow: hidden; min-height: 280px; }
+.mosaic { min-height: 520px; }
+.mosaic > div { min-height: 520px; }
 .card h3 { font-size: 2.6rem; margin: 0 0 0.3rem; }
 .card p { margin: 0; max-width: 36ch; }
 

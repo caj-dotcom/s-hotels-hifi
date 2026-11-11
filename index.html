@@ -4,22 +4,173 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>S Hotels Jamaica</title>
-<style>
-body { font-family: Georgia, serif; background: #f8f5f0; margin: 0; padding: 4rem 1.5rem; text-align: center; color: #1a1a1a; }
-h1 { font-weight: 400; margin-bottom: 0.5rem; }
-p.note { color: #666; margin-bottom: 2rem; }
-.links { display: flex; flex-direction: column; gap: 1rem; max-width: 420px; margin: 0 auto; }
-a { display: block; padding: 1rem 1.2rem; background: white; text-decoration: none; color: #1a1a1a; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-a:hover { background: #f0ebe3; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>S Hotels Jamaica</h1>
-<p class="note">Prototype pages for review with Miles.</p>
-<div class="links">
-  <a href="parent.html">S Hotels Jamaica (Parent)</a>
-  <a href="montego-bay.html">S Hotel Montego Bay</a>
-  <a href="kingston.html">S Hotel Kingston</a>
-</div>
+<header class="hero" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=80')">
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="#hotels">Our Hotels</a>
+      <a href="#story">Our Story</a>
+      <a href="#experiences">Experiences</a>
+    </div>
+    <a class="brand" href="index.html"><span class="mark">S</span> HOTELS JAMAICA</a>
+    <div class="nav-right">
+      <a href="tel:+18444864499">+1 844 486 4499</a>
+      <a class="book" href="#book">BOOK NOW<small>No booking fees</small></a>
+    </div>
+  </nav>
+  <div class="hero-copy">
+    <p class="eyebrow">Two hotels. One Jamaican house.</p>
+    <h1>S Hotels<br>Jamaica</h1>
+  </div>
+</header>
+
+<form class="booking" id="book" action="montego-bay.html">
+  <label class="field"><span>LOCATION</span>
+    <select name="hotel" aria-label="Hotel">
+      <option>Please select</option>
+      <option>Montego Bay</option>
+      <option>Kingston</option>
+    </select>
+  </label>
+  <label class="field"><span>CHECK IN / CHECK OUT</span><input type="text" value="Select dates" aria-label="Dates"></label>
+  <label class="field"><span>ROOMS</span><strong>1 room, 2 guests</strong></label>
+  <button class="check" type="submit">CHECK AVAILABILITY</button>
+</form>
+
+<section class="section" id="hotels">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Our Hotels</p>
+      <h2>A sense of place, in two different rhythms.</h2>
+      <p class="muted">Montego Bay is the beach and the art. Kingston is the city and the welcome home. Same care. Different reasons to stay.</p>
+      <a class="linkline" href="#experiences">COMPARE HOTELS</a>
+    </div>
+    <p class="muted">Distinctive properties for guests who want Jamaica in the details, not a resort that could be anywhere.</p>
+  </div>
+  <div class="hotel-grid" style="margin-top:2rem">
+    <a class="card tall" href="montego-bay.html">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80" alt="Montego Bay shoreline">
+      <figcaption><p class="eyebrow">Hip Strip</p><h3>S Hotel Montego Bay</h3><p>Boutique all-inclusive on Doctor's Cave Beach.</p></figcaption>
+    </a>
+    <a class="card tall" href="kingston.html">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80" alt="Kingston hotel interior">
+      <figcaption><p class="eyebrow">New Kingston</p><h3>S Hotel Kingston</h3><p>A calm base in the capital, for work and for coming home.</p></figcaption>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="story" style="padding-top:0">
+  <div class="split center">
+    <div>
+      <p class="eyebrow">Our Story</p>
+      <h2>A stay beyond the expected.</h2>
+      <p class="muted">S Hotels Jamaica keeps the comfort of a well run house and the character of the island. Art on the walls. Food with a point of view. Staff guests remember by name.</p>
+      <a class="linkline" href="montego-bay.html">DISCOVER</a>
+    </div>
+    <div class="story-photo"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=80" alt="Pool and sky"></div>
+  </div>
+</section>
+
+<section class="section" id="experiences" style="padding-top:1rem">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Experiences</p>
+      <h2>What both hotels share.</h2>
+      <p class="muted">Not a long list of activities. A few things done with intention: the beach or the city, the art, the table, and a place to slow down.</p>
+    </div>
+    <div class="stack">
+      <a class="label-card" href="montego-bay.html" style="min-height:340px"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1400&q=80" alt="Beach"><span>Direct access to Doctor's Cave Beach</span></a>
+      <a class="label-card" href="kingston.html"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1400&q=80" alt="Artwork"><span>Arts & Heritage</span></a>
+      <a class="label-card" href="montego-bay.html#dining"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80" alt="Dining"><span>All-inclusive dining and drinks</span></a>
+      <a class="label-card" href="montego-bay.html#wellness"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80" alt="Spa"><span>Irie Spa and Baths</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:2rem">
+  <div class="split">
+    <h2>Awards & partners</h2>
+    <p class="muted">We are grateful for the recognition, and more grateful for what earns it. Meaningful stays, genuine care, and moments guests take home.</p>
+  </div>
+  <div class="awards">
+    <div class="award">CONDÉ NAST<br>TRAVELER</div>
+    <div class="award">TRIPADVISOR<br>TRAVELERS' CHOICE</div>
+    <div class="award">SMALL LUXURY<br>HOTELS</div>
+    <div class="award">USA TODAY<br>10BEST</div>
+  </div>
+  <div class="rule"><i></i></div>
+</section>
+
+<section class="section" style="padding-top:3rem">
+  <p class="eyebrow">What our guests say</p>
+  <div class="quotes" style="margin-top:1.2rem">
+    <blockquote class="quote">The stay feels personal. Guests write about staff they remember by name, and about a house that looks after them without rushing them.
+      <cite>GUEST NOTES, TRIPADVISOR</cite>
+    </blockquote>
+    <div class="stat"><strong>4.5</strong><span>Montego Bay on Tripadvisor</span></div>
+    <div class="stat"><strong>4.0</strong><span>Kingston on Tripadvisor</span></div>
+    <div class="stat"><strong>SLH</strong><span>Small Luxury Hotels of the World</span></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="news">
+    <div class="news-photo" style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80')"></div>
+    <form class="news" onsubmit="return false" style="display:block">
+      <h2>Sign up to the S Hotels Jamaica newsletter</h2>
+      <input placeholder="Your name" aria-label="Your name">
+      <input type="email" placeholder="Your email" aria-label="Your email">
+      <p class="fine" style="margin-top:1rem">I want to hear about</p>
+      <div class="choices">
+        <button type="button" class="on">Both</button>
+        <button type="button">Kingston</button>
+        <button type="button">Montego Bay</button>
+      </div>
+      <div class="row">
+        <label class="fine"><input type="checkbox"> I agree to the privacy policy.</label>
+        <button class="go" type="submit">→</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a class="brand" href="index.html" style="justify-content:flex-start;letter-spacing:.14em"><span class="mark">S</span></a>
+    <h4>HOTELS</h4>
+    <a href="kingston.html">Kingston</a>
+    <a href="montego-bay.html">Montego Bay</a>
+    <a href="index.html">Foundation</a>
+  </div>
+  <div>
+    <h4>LINKS</h4>
+    <a href="#story">About us</a>
+    <a href="tel:+18444864499">Contact</a>
+    <a href="index.html">Careers</a>
+    <a href="index.html">Media</a>
+  </div>
+  <div>
+    <h4>FOLLOW US</h4>
+    <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+    <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+  </div>
+  <div>
+    <h4>A NOTE</h4>
+    <p>Early design for review. Booking stays on the hotel's own engine.</p>
+  </div>
+  <p class="copy">© 2026 S Hotels Jamaica</p>
+</footer>
+<script>
+document.querySelectorAll(".choices button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.querySelectorAll("button").forEach(b => b.classList.remove("on"));
+    btn.classList.add("on");
+  });
+});
+</script>
 </body>
 </html>

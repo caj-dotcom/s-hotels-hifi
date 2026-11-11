@@ -16,15 +16,17 @@
  * becomes the real one: reorder or delete the sections in the HTML to match.
  */
 (function () {
+  // Wireframe build: the tool shows by default. ?dev=0 hides it in this
+  // browser until a page is opened with ?dev=1.
   var FLAG = 'sections-dev';
   var params = new URLSearchParams(location.search);
-  var on = params.get('dev') === '1';
+  var on = params.get('dev') !== '0';
   try {
-    if (params.get('dev') === '1') localStorage.setItem(FLAG, '1');
-    if (params.get('dev') === '0') localStorage.removeItem(FLAG);
-    on = localStorage.getItem(FLAG) === '1';
+    if (params.get('dev') === '1') localStorage.removeItem(FLAG);
+    if (params.get('dev') === '0') localStorage.setItem(FLAG, 'off');
+    on = localStorage.getItem(FLAG) !== 'off';
   } catch (e) {
-    // Storage blocked: only ?dev=1 on this page view turns it on.
+    // Storage blocked: only ?dev=0 on this page view hides it.
   }
   if (!on) return;
 
@@ -202,7 +204,7 @@
       var up = document.createElement('button');
       up.type = 'button';
       up.className = 'sdt-move';
-      up.textContent = '↑';
+      up.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7.5 6 4.5l3 3"/></svg>';
       up.setAttribute('aria-label', 'Move ' + labelOf(id) + ' up');
       up.disabled = index === 0;
       up.addEventListener('click', function () {
@@ -212,7 +214,7 @@
       var down = document.createElement('button');
       down.type = 'button';
       down.className = 'sdt-move';
-      down.textContent = '↓';
+      down.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3"/></svg>';
       down.setAttribute('aria-label', 'Move ' + labelOf(id) + ' down');
       down.disabled = index === state.order.length - 1;
       down.addEventListener('click', function () {

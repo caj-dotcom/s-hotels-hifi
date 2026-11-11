@@ -4,45 +4,193 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>S Hotel Montego Bay</title>
-<style>
-:root { --bg: #f7f4ef; --text: #1c1c1c; --accent: #a67c52; }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Georgia, serif; background: var(--bg); color: var(--text); }
-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4%; background: rgba(247,244,239,0.96); position: sticky; top: 0; }
-a { color: inherit; }
-.hero { min-height: 80vh; background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80') center/cover; display: flex; align-items: flex-end; padding: 4rem; color: white; }
-.hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 400; max-width: 700px; }
-.booking-bar { background: white; padding: 1.2rem 4%; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-.booking-bar input, .btn { padding: 0.85rem 1rem; border: 1px solid #ddd; border-radius: 4px; font: inherit; }
-.btn { background: var(--accent); color: white; border: none; }
-.section { padding: 4.5rem 4%; max-width: 1100px; margin: 0 auto; }
-.section h2 { font-size: 2.2rem; font-weight: 400; margin-bottom: 1rem; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
-.grid img { width: 100%; height: 340px; object-fit: cover; border-radius: 6px; }
-footer { background: #1c1c1c; color: white; padding: 2.5rem 4%; text-align: center; }
-@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } .hero { padding: 2rem; } }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<nav>
-  <a href="index.html" style="text-decoration:none;font-weight:600;letter-spacing:1px;">S HOTEL MONTEGO BAY</a>
-  <a href="parent.html" style="text-decoration:none;">All hotels</a>
-</nav>
-<section class="hero"><h1>On Doctor's Cave Beach.<br>Art in every corner.</h1></section>
-<div class="booking-bar">
-  <input type="date" aria-label="Check in">
-  <input type="date" aria-label="Check out">
-  <button class="btn">Check availability</button>
-</div>
-<section class="section"><div class="grid">
-  <div><h2>The beach is the reason.</h2><p>Direct access to Doctor's Cave. Slow afternoons, the Sky Deck, and the sound of the water. Not a large resort. A boutique all-inclusive with space to breathe.</p></div>
-  <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80" alt="Beach">
-</div></section>
-<section class="section"><div class="grid">
-  <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1200&q=80" alt="Art">
-  <div><h2>A museum you can stay in.</h2><p>Life-size Jamaican icons, artwork throughout the property, and Bob Marley record players in the rooms. Culture is not a detail here.</p></div>
-</div></section>
-<section class="section"><h2>Dining and spa</h2><p>Rocksteady, Jamrock, Roots Rock, and the Marketplace. Irie Spa with subterranean baths. Everything is included, but the pace stays calm.</p></section>
-<footer>S Hotel Montego Bay · Doctor's Cave Beach</footer>
+<body class="page-bay">
+<header class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80')">
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="index.html">Montego Bay</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#beach">Beach</a>
+      <a href="#dining">Dining</a>
+      <a href="#wellness">Wellness</a>
+      <a href="#weddings">Weddings</a>
+    </div>
+    <a class="brand" href="index.html"><span class="mark">S</span> HOTELS JAMAICA</a>
+    <div class="nav-right">
+      <a href="tel:+18883469897">+1 888 346 9897</a>
+      <a class="book" href="#book">BOOK NOW<small>No booking fees</small></a>
+    </div>
+  </nav>
+  <div class="hero-copy">
+    <p class="eyebrow">Boutique all-inclusive · Doctor's Cave Beach</p>
+    <h1>Jamaican spirit<br>in every corner.</h1>
+  </div>
+</header>
+
+<form class="booking" id="book" onsubmit="return false">
+  <label class="field"><span>LOCATION</span><strong>Montego Bay</strong></label>
+  <label class="field"><span>CHECK IN / CHECK OUT</span><input type="text" value="Select dates" aria-label="Dates"></label>
+  <label class="field"><span>ROOMS</span><strong>1 room, 2 guests</strong></label>
+  <button class="check" type="submit">CHECK AVAILABILITY</button>
+</form>
+
+<section class="section">
+  <div class="intro-grid">
+    <div>
+      <p class="eyebrow">On the Hip Strip</p>
+      <h2>The beach is the front door.</h2>
+      <p class="muted">S Hotel Montego Bay is a boutique all-inclusive with direct access to Doctor's Cave. Guests walk out of the lobby onto the sand, stop for the art, and settle into a pace that is looked after rather than scheduled. Children are welcome from 8. This is not a large resort.</p>
+      <div class="facts">
+        <div><strong>Doctor's Cave</strong><span class="fine">Direct beach access</span></div>
+        <div><strong>Art on the walls</strong><span class="fine">Icons through the house</span></div>
+        <div><strong>Sangster</strong><span class="fine">A short ride from the airport</span></div>
+      </div>
+    </div>
+    <div class="story-photo"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1200&q=80" alt="Art in the hotel"></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="split">
+    <h2>Awards</h2>
+    <p class="muted">Grateful for the recognition, and more grateful for the afternoons, the music, and the staff guests come back for.</p>
+  </div>
+  <div class="awards">
+    <div class="award">CONDÉ NAST</div>
+    <div class="award">TRIPADVISOR</div>
+    <div class="award">SMALL LUXURY HOTELS</div>
+    <div class="award">USA TODAY</div>
+  </div>
+  <div class="rule"><i></i></div>
+</section>
+
+<section class="section" id="beach">
+  <p class="eyebrow">Beach & atmosphere</p>
+  <h2>Nobody is racing for a cabana.</h2>
+  <p class="muted">There is room to sit. The Sky Deck is for the view. The water is the plan. At night the music stays part of the house, not a party the whole bay has to join.</p>
+  <div class="hotel-grid" style="margin-top:1.5rem">
+    <div class="card"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1400&q=80" alt="Beach"><figcaption><h3>The beach</h3><p>Doctor's Cave, steps from the lobby.</p></figcaption></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1400&q=80" alt="Pool"><figcaption><h3>The house</h3><p>Pool, Sky Deck, and art between them.</p></figcaption></div>
+  </div>
+</section>
+
+<section class="section" id="rooms" style="padding-top:1rem">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Rooms & suites</p>
+      <h2>Stay close to the water, or above it.</h2>
+      <p class="muted">Rooms are calm and well kept. Record players and Jamaican art sit in the stay, not as a theme. Ask for a quieter side if street sound matters.</p>
+      <a class="linkline" href="#book">VIEW ROOMS</a>
+    </div>
+    <div class="story-photo"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=80" alt="Guest room"></div>
+  </div>
+</section>
+
+<section class="section" id="dining" style="padding-top:0">
+  <div class="rooms">
+    <article>
+      <div class="room"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Dining"><span>Restaurants & bars</span></div>
+      <p class="muted">Rocksteady, Jamrock, Roots Rock, and the Marketplace. Included, and still worth sitting down for.</p>
+      <a class="linkline" href="#book">EXPLORE</a>
+    </article>
+    <article id="wellness">
+      <div class="room"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80" alt="Spa"><span>Spa & wellness</span></div>
+      <p class="muted">Irie Spa and the baths. A slower part of an already unhurried day.</p>
+      <a class="linkline" href="#book">EXPLORE</a>
+    </article>
+    <article>
+      <div class="room"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Celebration"><span>Meetings</span></div>
+      <p class="muted">Small gatherings when the beach is the reason everyone came.</p>
+      <a class="linkline" href="#weddings">EXPLORE</a>
+    </article>
+  </div>
+</section>
+
+<section class="video-band" id="weddings" style="background-image:url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=2000&q=80')">
+  <div>
+    <p class="eyebrow">Weddings & honeymoons</p>
+    <h2 style="color:#fff;max-width:12ch">Romance, without the resort show.</h2>
+    <p style="max-width:46ch">A celebration on the beach, then a quiet room. The Hip Strip is a door you can open, not the whole stay.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="contact">
+    <div>
+      <h3 class="serif" style="font-size:2rem;margin:0 0 .4rem">S Hotel Montego Bay</h3>
+      <p class="muted">Jimmy Cliff Boulevard, the Hip Strip. Doctor's Cave Beach at the door.</p>
+      <a class="linkline" href="https://maps.google.com/?q=S+Hotel+Montego+Bay" target="_blank" rel="noreferrer">OPEN MAP</a>
+    </div>
+    <div>
+      <h3 class="serif" style="font-size:2rem;margin:0 0 .4rem">Room reservation</h3>
+      <p class="muted">Call +1 888 346 9897. Booking on this site carries no extra fee.</p>
+      <a class="linkline" href="tel:+18883469897">CONTACT US</a>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" style="padding-top:0">
+  <h2>Questions, answered here.</h2>
+  <details open>
+    <summary>Is the hotel all-inclusive?</summary>
+    <p>Yes. Meals and drinks are included. It is still a boutique hotel, not a large resort with a long activity sheet.</p>
+  </details>
+  <details>
+    <summary>How close is Doctor's Cave Beach?</summary>
+    <p>It is the beach at the hotel. Guests walk out to it.</p>
+  </details>
+  <details>
+    <summary>Can I walk to the Hip Strip?</summary>
+    <p>Yes. It is there when you want it, and the hotel stays quiet when you do not.</p>
+  </details>
+  <details>
+    <summary>Are children welcome?</summary>
+    <p>Children from 8 are welcome. Some areas of the hotel stay adult-only.</p>
+  </details>
+  <details>
+    <summary>How far is the airport?</summary>
+    <p>Sangster International is a short ride from the Hip Strip.</p>
+  </details>
+</section>
+
+<section class="section" style="padding-top:1rem">
+  <div class="news">
+    <div class="news-photo" style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80')"></div>
+    <form onsubmit="return false" style="padding:3rem 2.2rem">
+      <h2>Hear about Montego Bay</h2>
+      <input placeholder="Your name" aria-label="Your name">
+      <input type="email" placeholder="Your email" aria-label="Your email">
+      <div class="row">
+        <label class="fine"><input type="checkbox"> I agree to the privacy policy.</label>
+        <button class="go" type="submit">→</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a class="brand" href="index.html" style="justify-content:flex-start"><span class="mark">S</span></a>
+    <h4>HOTELS</h4>
+    <a href="kingston.html">Kingston</a>
+    <a href="montego-bay.html">Montego Bay</a>
+  </div>
+  <div>
+    <h4>LINKS</h4>
+    <a href="index.html">About us</a>
+    <a href="tel:+18883469897">Contact</a>
+  </div>
+  <div>
+    <h4>FOLLOW US</h4>
+    <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+    <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+  </div>
+  <div><h4>THIS PAGE</h4><p>Montego Bay direction for review with Miles.</p></div>
+  <p class="copy">© 2026 S Hotels Jamaica</p>
+</footer>
 </body>
 </html>

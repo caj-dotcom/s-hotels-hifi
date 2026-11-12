@@ -36,3 +36,6 @@
 /* Our Story: the 2024 banner is a dark placeholder in the wireframe */
 .img.dark { background: #777; }
 .img.dark .ph-x line { stroke: rgba(255,255,255,0.35); }
+
+/* Charity Foundation: mid-grey thumbnails in the wireframe */
+.img.mid { background: #b3b3b3; }

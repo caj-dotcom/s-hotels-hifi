@@ -352,3 +352,19 @@ main.page { height: auto; }
 .uline:hover .chev.r { transform: translateX(3px) rotate(-45deg); }
 .sq .chev.r { margin-right: 3px; }
 .sq .chev.l { margin-left: 3px; }
+
+/* Kingston Experiences slider: mixed-size cards, drag or swipe to slide */
+.xp-rail { gap: calc(58 * var(--u)); align-items: center; scroll-snap-type: none; cursor: grab; }
+.xp-rail > * { scroll-snap-align: none; }
+.xp-rail.dragging { cursor: grabbing; scroll-behavior: auto; user-select: none; }
+.xp-i { flex: none; width: calc(326 * var(--u)); }
+.xp-i.s { height: calc(208 * var(--u)); }
+.xp-i.m { height: calc(320 * var(--u)); }
+.xp-i.l { height: calc(464 * var(--u)); }
+.xp-i img { pointer-events: none; -webkit-user-drag: none; }
+@media (max-width: 900px) {
+  .xp-rail.a { height: auto; margin-left: -16px; margin-right: -16px; padding: 0 16px; }
+  .xp-rail { gap: 12px; }
+  .xp-i { width: 46vw; }
+  .xp-i.s { height: 30vw; } .xp-i.m { height: 46vw; } .xp-i.l { height: 64vw; }
+}

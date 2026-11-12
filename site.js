@@ -102,6 +102,28 @@
     update();
   });
 
+  /* Drag-to-slide rows (Kingston Experiences): opening peek + click-and-drag with a mouse */
+  $$("[data-drag]").forEach(function (rail) {
+    var start = Number(rail.dataset.start || 0);
+    if (start) rail.scrollLeft = start * (rail.clientWidth / 1808);
+    var down = false, moved = false, x0 = 0, s0 = 0;
+    rail.addEventListener("pointerdown", function (e) {
+      if (e.pointerType !== "mouse" || e.button !== 0) return;
+      down = true; moved = false; x0 = e.clientX; s0 = rail.scrollLeft;
+      rail.setPointerCapture(e.pointerId);
+    });
+    rail.addEventListener("pointermove", function (e) {
+      if (!down) return;
+      var dx = e.clientX - x0;
+      if (!moved && Math.abs(dx) > 4) { moved = true; rail.classList.add("dragging"); }
+      if (moved) rail.scrollLeft = s0 - dx;
+    });
+    function end() { down = false; rail.classList.remove("dragging"); }
+    rail.addEventListener("pointerup", end);
+    rail.addEventListener("pointercancel", end);
+    rail.addEventListener("click", function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+  });
+
   /* Tabs (parent Experiences: Montego Bay / Kingston) */
   $$("[role=tablist]:not(.amen-switch)").forEach(function (list) {
     var tabs = $$("[role=tab]", list);

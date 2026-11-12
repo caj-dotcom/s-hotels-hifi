@@ -305,3 +305,7 @@ main.page { height: auto; }
   .site-header .nav { font-size: 16px; }
   .hotel-menu > button { font-size: 16px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
 }
+
+/* Arrow icon in text links (contact row) */
+.uline .arr { display: inline-block; width: max(calc(18 * var(--u)), 12px); height: auto; margin-left: max(calc(8 * var(--u)), 5px); vertical-align: -0.12em; transition: transform 0.25s; }
+.uline:hover .arr { transform: translateX(3px); }

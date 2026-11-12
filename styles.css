@@ -429,3 +429,6 @@ main.page { height: auto; }
   .stack-card { position: relative; top: auto !important; height: auto; transform: none !important; }
   .stack-card::after { display: none; }
 }
+
+/* Home link on sub pages (top bar, beside the logo) */
+.home-link { justify-content: flex-start; }

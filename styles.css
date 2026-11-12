@@ -396,3 +396,6 @@ main.page { height: auto; }
   .story-pin.a { height: auto !important; }
   .img.story-pin-img { position: relative; top: auto; height: auto; aspect-ratio: 1; }
 }
+
+/* Our Story: history images in black & white */
+.img.bw img { filter: grayscale(1); }

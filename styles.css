@@ -378,3 +378,13 @@ main.page { height: auto; }
   .award-logos li { height: 76px; }
   .award-logos img { max-width: 100%; }
 }
+
+/* Our Story page */
+.story-copy p + p { margin-top: calc(36 * var(--u)); }
+.note-box { background: #fff; }
+.nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+@media (max-width: 900px) {
+  .page-story main.page { padding-top: 96px; }
+  .story-copy p + p { margin-top: 1em; }
+  .note-box { display: none; }
+}

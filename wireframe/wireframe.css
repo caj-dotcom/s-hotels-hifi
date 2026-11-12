@@ -32,3 +32,7 @@
 
 /* Placeholder thumbnails in the hotel dropdown */
 .hotel-panel a > svg { position: relative; aspect-ratio: 4 / 3; height: auto; background: var(--box); outline: 1px solid var(--line); outline-offset: -1px; }
+
+/* Our Story: the 2024 banner is a dark placeholder in the wireframe */
+.img.dark { background: #777; }
+.img.dark .ph-x line { stroke: rgba(255,255,255,0.35); }

@@ -10,7 +10,7 @@
   function onScroll() {
     if (!header) return;
     var limit = hero ? hero.offsetHeight - 140 : 40;
-    header.classList.toggle("is-solid", window.scrollY > limit);
+    header.classList.toggle("is-solid", !hero || window.scrollY > limit);
     header.classList.toggle("is-scrolled", window.scrollY > 24);
   }
   window.addEventListener("scroll", onScroll, { passive: true });

@@ -97,7 +97,7 @@
   });
 
   /* Tabs (parent Experiences: Montego Bay / Kingston) */
-  $$("[role=tablist]").forEach(function (list) {
+  $$("[role=tablist]:not(.amen-switch)").forEach(function (list) {
     var tabs = $$("[role=tab]", list);
     var link = list.dataset.link ? $(list.dataset.link) : null;
     function select(tab) {
@@ -114,6 +114,24 @@
       t.addEventListener("keydown", function (e) {
         if (e.key === "ArrowDown" || e.key === "ArrowRight") { e.preventDefault(); tabs[(k + 1) % tabs.length].focus(); select(tabs[(k + 1) % tabs.length]); }
         if (e.key === "ArrowUp" || e.key === "ArrowLeft") { e.preventDefault(); tabs[(k - 1 + tabs.length) % tabs.length].focus(); select(tabs[(k - 1 + tabs.length) % tabs.length]); }
+      });
+    });
+  });
+
+  /* Parent Experiences: the hotel names switch the amenity cards (Montego Bay / Kingston) */
+  $$(".amen-switch").forEach(function (sw) {
+    var btns = $$(".hsel", sw);
+    var link = $("[data-amen-link]");
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var hotel = btn.dataset.hotel;
+        btns.forEach(function (b) {
+          var on = b === btn;
+          b.classList.toggle("on", on);
+          b.setAttribute("aria-selected", String(on));
+        });
+        $$("[data-amen]").forEach(function (card) { card.hidden = card.dataset.amen !== hotel; });
+        if (link) link.href = hotel === "ks" ? "kingston.html" : "montego-bay.html";
       });
     });
   });

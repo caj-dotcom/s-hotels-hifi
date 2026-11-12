@@ -309,3 +309,21 @@ main.page { height: auto; }
 /* Arrow icon in text links (contact row) */
 .uline .arr { display: inline-block; width: max(calc(18 * var(--u)), 12px); height: auto; margin-left: max(calc(8 * var(--u)), 5px); vertical-align: -0.12em; transition: transform 0.25s; }
 .uline:hover .arr { transform: translateX(3px); }
+
+/* Parent Experiences: left column stays while the amenity cards scroll */
+.exp-sticky { position: sticky; top: calc(150 * var(--u)); height: calc(720 * var(--u)); }
+.amen-switch .hsel { position: absolute; left: 0; padding: 0; border: 0; background: none; text-align: left; white-space: nowrap; cursor: pointer; transition: top 0.35s cubic-bezier(0.22, 0.61, 0.36, 1), font-size 0.35s, color 0.25s; }
+.hsel.on { top: calc(476 * var(--u)); font-family: var(--serif); font-weight: 400; font-size: calc(40 * var(--u)); line-height: 1.5; letter-spacing: -0.022em; color: var(--ink); }
+.hsel:not(.on) { top: calc(561 * var(--u)); font-family: var(--sans); font-weight: 400; font-size: max(calc(24 * var(--u)), 12px); line-height: 1.5; color: var(--mute); }
+.hsel:not(.on):hover { color: var(--ink); }
+[data-amen] { animation: amenIn 0.45s ease both; }
+@keyframes amenIn { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { [data-amen] { animation: none; } .amen-switch .hsel { transition: none; } }
+@media (max-width: 900px) {
+  .exp-left.a { height: auto; }
+  .exp-sticky { position: static; height: auto; display: flex; flex-direction: column; }
+  .amen-switch { display: flex; flex-direction: column; gap: 6px; margin-top: 20px; }
+  .amen-switch .hsel { position: static; }
+  .hsel.on { font-size: 1.3rem; order: -1; }
+  .hsel:not(.on) { font-size: 1rem; }
+}

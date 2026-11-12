@@ -386,7 +386,8 @@ main.page { height: auto; }
 @media (max-width: 900px) {
   .page-story main.page { padding-top: 96px; }
   .story-copy p + p { margin-top: 1em; }
-  .note-box { display: none; }
+  .note-box.a { margin: -48px 16px 0; padding: 20px; height: auto !important; z-index: 1; box-shadow: 0 1px 0 var(--line); }
+  .note-box .a { margin-top: 0; }
 }
 
 /* Our Story: right image stays put while the history text scrolls */

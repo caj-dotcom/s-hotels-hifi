@@ -339,3 +339,7 @@ main.page { height: auto; }
   .hcard { width: 80vw; }
   .hcard .img { height: 60vw !important; }
 }
+
+/* Our Hotels back arrow: hidden at the start, shown once the row is scrolled */
+.hotel-prev { transition: opacity 0.25s, background 0.2s, color 0.2s; }
+.hotel-prev:disabled { opacity: 0; pointer-events: none; }

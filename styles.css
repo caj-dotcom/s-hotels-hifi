@@ -343,3 +343,12 @@ main.page { height: auto; }
 /* Our Hotels back arrow: hidden at the start, shown once the row is scrolled */
 .hotel-prev { transition: opacity 0.25s, background 0.2s, color 0.2s; }
 .hotel-prev:disabled { opacity: 0; pointer-events: none; }
+
+/* Chevron arrows: the same thin chevron as the hotel dropdown, pointing left or right */
+.chev { display: inline-block; width: max(calc(11 * var(--u)), 7px); height: max(calc(11 * var(--u)), 7px); border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; vertical-align: middle; }
+.chev.r { transform: rotate(-45deg); }
+.chev.l { transform: rotate(135deg); }
+.uline .chev { width: max(calc(8 * var(--u)), 6px); height: max(calc(8 * var(--u)), 6px); margin-left: 0.45em; vertical-align: 0.05em; transition: transform 0.25s; }
+.uline:hover .chev.r { transform: translateX(3px) rotate(-45deg); }
+.sq .chev.r { margin-right: 3px; }
+.sq .chev.l { margin-left: 3px; }

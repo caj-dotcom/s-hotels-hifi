@@ -419,3 +419,13 @@ main.page { height: auto; }
 }
 @media (prefers-reduced-motion: reduce) { .car img { transition: none; } }
 [data-set][hidden] { display: none !important; }
+
+/* Experiences (Montego Bay): stacking feature cards */
+.stack-track { pointer-events: none; }
+.stack-card { position: sticky; height: calc(809 * var(--u)); pointer-events: auto; transform-origin: 50% 0; will-change: transform; }
+.stack-card::after { content: ""; position: absolute; inset: 0; background: #000; opacity: var(--dim, 0); pointer-events: none; }
+@media (max-width: 900px) {
+  .stack-track.a { height: auto !important; }
+  .stack-card { position: relative; top: auto !important; height: auto; transform: none !important; }
+  .stack-card::after { display: none; }
+}

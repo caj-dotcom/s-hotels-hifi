@@ -164,6 +164,34 @@
     });
   });
 
+  /* Stacking cards (Experiences, Montego Bay): cards behind shrink and dim as the next one covers them */
+  var stack = $$("[data-stack]");
+  if (stack.length && !reduce) {
+    var paintStack = function () {
+      var wide = window.innerWidth > 900;
+      var cover = stack.map(function (c) {
+        var top = parseFloat(getComputedStyle(c).top) || 0;
+        var r = c.getBoundingClientRect();
+        if (!wide || !r.height) return 0;
+        return Math.max(0, Math.min(1, 1 - (r.top - top) / r.height));
+      });
+      stack.forEach(function (c, i) {
+        var depth = 0;
+        for (var j = i + 1; j < stack.length; j++) depth += cover[j];
+        c.style.transform = depth ? "scale(" + (1 - 0.05 * depth).toFixed(4) + ")" : "";
+        c.style.setProperty("--dim", (0.12 * depth).toFixed(3));
+      });
+    };
+    var stackTick = false;
+    window.addEventListener("scroll", function () {
+      if (stackTick) return;
+      stackTick = true;
+      requestAnimationFrame(function () { stackTick = false; paintStack(); });
+    }, { passive: true });
+    window.addEventListener("resize", paintStack);
+    paintStack();
+  }
+
   /* Experiences page: Montego Bay / Kingston switch shows that hotel's activities */
   $$("[data-switch]").forEach(function (sw) {
     var btns = $$("[data-show]", sw);

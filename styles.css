@@ -388,3 +388,10 @@ main.page { height: auto; }
   .story-copy p + p { margin-top: 1em; }
   .note-box { display: none; }
 }
+
+/* Our Story: right image stays put while the history text scrolls */
+.img.story-pin-img { position: sticky; top: calc(150 * var(--u)); height: calc(852 * var(--u)); }
+@media (max-width: 900px) {
+  .story-pin.a { height: auto !important; }
+  .img.story-pin-img { position: relative; top: auto; height: auto; aspect-ratio: 1; }
+}

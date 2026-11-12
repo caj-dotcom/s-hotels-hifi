@@ -164,6 +164,30 @@
     });
   });
 
+  /* Experiences page: Montego Bay / Kingston switch shows that hotel's activities */
+  $$("[data-switch]").forEach(function (sw) {
+    var btns = $$("[data-show]", sw);
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var show = btn.dataset.show;
+        btns.forEach(function (b) { var on = b === btn; b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on)); });
+        $$("[data-set]").forEach(function (el) { el.hidden = el.dataset.set !== show; });
+      });
+    });
+  });
+
+  /* Activity cards: arrows step through each card's photos */
+  $$("[data-car]").forEach(function (car) {
+    var pics = $$("img", car), n = 0;
+    if (pics.length < 2) return;
+    $$(".car-btn", car).forEach(function (b) {
+      b.addEventListener("click", function () {
+        n = (n + Number(b.dataset.dir) + pics.length) % pics.length;
+        pics.forEach(function (p, k) { p.classList.toggle("on", k === n); });
+      });
+    });
+  });
+
   /* Disclosure buttons (Compare hotels) */
   $$("[data-toggle]").forEach(function (b) {
     var target = $("#" + b.getAttribute("aria-controls"));

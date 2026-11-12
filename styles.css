@@ -399,3 +399,23 @@ main.page { height: auto; }
 
 /* Our Story: history images in black & white */
 .img.bw img { filter: grayscale(1); }
+
+/* Experiences page: hotel switch */
+.ex-switch { display: flex; gap: 0; padding: calc(8 * var(--u)); background: #e8e8e8; }
+.ex-switch button { height: calc(48 * var(--u)); min-height: 32px; border: 0; background: transparent; font: 400 max(calc(16 * var(--u)), 12px)/1 var(--sans); color: var(--ink); cursor: pointer; transition: background 0.2s; }
+.ex-switch button.on { background: #fff; }
+.ex-switch button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+/* Activity cards: small photo carousel */
+.car img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.45s ease; }
+.car img.on { opacity: 1; }
+.car-btn { position: absolute; top: calc(183 * var(--u)); width: calc(32 * var(--u)); height: calc(32 * var(--u)); min-width: 28px; min-height: 28px; display: grid; place-items: center; padding: 0; border: 0; background: #fff; color: var(--ink); cursor: pointer; z-index: 1; }
+.car-btn.l { left: calc(16 * var(--u)); }
+.car-btn.r { right: calc(21.5 * var(--u)); }
+.car-btn .chev { width: 8px; height: 8px; }
+@media (max-width: 900px) {
+  .ex-switch { width: max-content !important; }
+  .ex-switch button { width: auto !important; padding: 0 14px; }
+  .car-btn { top: calc(50% - 14px); }
+}
+@media (prefers-reduced-motion: reduce) { .car img { transition: none; } }
+[data-set][hidden] { display: none !important; }

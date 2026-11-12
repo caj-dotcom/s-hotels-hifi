@@ -85,11 +85,17 @@
       }
       btns.forEach(function (b) {
         var dir = Number(b.dataset.dir);
+        if (b.hasAttribute("data-loop")) return;
         b.disabled = dir < 0 ? rail.scrollLeft <= 2 : rail.scrollLeft >= max - 2;
       });
     }
     btns.forEach(function (b) {
-      b.addEventListener("click", function () { rail.scrollBy({ left: Number(b.dataset.dir) * step(), behavior: reduce ? "auto" : "smooth" }); });
+      b.addEventListener("click", function () {
+        var behavior = reduce ? "auto" : "smooth";
+        var atEnd = rail.scrollLeft >= rail.scrollWidth - rail.clientWidth - 12;
+        if (b.hasAttribute("data-loop") && Number(b.dataset.dir) > 0 && atEnd) { rail.scrollTo({ left: 0, behavior: behavior }); return; }
+        rail.scrollBy({ left: Number(b.dataset.dir) * step(), behavior: behavior });
+      });
     });
     rail.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);

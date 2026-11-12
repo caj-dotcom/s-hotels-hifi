@@ -327,3 +327,15 @@ main.page { height: auto; }
   .hsel.on { font-size: 1.3rem; order: -1; }
   .hsel:not(.on) { font-size: 1rem; }
 }
+
+/* Our Hotels: horizontal scroll of hotel cards */
+.hotel-rail { gap: calc(71 * var(--u)); padding-right: calc(62 * var(--u)); }
+.hcard { width: calc(808.7 * var(--u)); }
+.hcard h3 { margin-top: calc(32 * var(--u)); }
+.hcard p { margin-top: calc(11 * var(--u)); }
+@media (max-width: 900px) {
+  .hotel-rail.a { height: auto; margin-right: -16px; }
+  .hotel-rail { gap: 14px; }
+  .hcard { width: 80vw; }
+  .hcard .img { height: 60vw !important; }
+}

@@ -396,9 +396,11 @@ main.page { height: auto; }
 }
 
 /* Our Story: right image stays put while the history text scrolls */
+.room-pin > .room.a { display: block; position: sticky; top: calc(150 * var(--u)); }
 .img.story-pin-img { position: sticky; top: calc(150 * var(--u)); height: calc(852 * var(--u)); }
 @media (max-width: 900px) {
-  .story-pin.a { height: auto !important; }
+  .story-pin.a, .room-pin.a { height: auto !important; }
+  .room-pin > .room.a { position: relative; top: auto; }
   .img.story-pin-img { position: relative; top: auto; height: auto; aspect-ratio: 1; }
 }
 

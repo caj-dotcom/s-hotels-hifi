@@ -498,7 +498,7 @@ main.page { height: auto; }
 .ev-panel { position: relative; flex: 0 0 calc(347.44 * var(--u)); overflow: hidden; background: var(--box); cursor: pointer; transition: flex-basis 0.55s cubic-bezier(0.22, 0.61, 0.36, 1); }
 .ev-panel.on { flex-basis: calc(896 * var(--u)); cursor: default; }
 .ev-panel > .img { position: absolute; inset: 0; }
-.ev-panel > .img::after { background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 45%, rgba(0, 0, 0, 0.45) 100%); }
+.ev-panel > .img::after { background: linear-gradient(180deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.45) 55%, rgba(0, 0, 0, 0.55) 100%); }
 .ev-text { position: absolute; inset: 0; z-index: 1; color: #fff; }
 .ev-text h3 { position: absolute; left: calc(47 * var(--u)); top: calc(45.8 * var(--u)); width: calc(292 * var(--u)); margin: 0; }
 .ev-text p { position: absolute; left: calc(47 * var(--u)); top: calc(207.3 * var(--u)); width: calc(568 * var(--u)); margin: 0; opacity: 0; transition: opacity 0.25s; }

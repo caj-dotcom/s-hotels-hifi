@@ -40,3 +40,4 @@
 
 /* Charity Foundation: mid-grey thumbnails in the wireframe */
 .img.mid { background: #b3b3b3; }
+.ev-text, .ev-text .uline { color: var(--ink); border-bottom-color: var(--ink); }

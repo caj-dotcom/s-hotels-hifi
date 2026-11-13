@@ -320,3 +320,15 @@
   var h = location.hash.replace("#", "");
   if (h === "rooms" || h === "suites") apply(h === "rooms" ? "room" : "suite");
 })();
+
+/* Meetings & Events panels: hover, focus or tap opens one, the others narrow */
+(function () {
+  var panels = Array.prototype.slice.call(document.querySelectorAll("[data-ev]"));
+  if (!panels.length) return;
+  function open(p) { panels.forEach(function (q) { q.classList.toggle("on", q === p); }); }
+  panels.forEach(function (p) {
+    p.addEventListener("mouseenter", function () { if (window.matchMedia("(hover: hover)").matches) open(p); });
+    p.addEventListener("focus", function () { open(p); });
+    p.addEventListener("click", function () { open(p); });
+  });
+})();

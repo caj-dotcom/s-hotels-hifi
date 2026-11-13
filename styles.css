@@ -491,3 +491,29 @@ main.page { height: auto; }
   .rcard.dine .ractions { margin-top: 18px; }
   .dine-desc { margin-top: 8px; }
 }
+
+/* Kingston Meetings & Events: expanding panels, venue cards, enquiry links */
+.enq.c { text-align: center; }
+.ev-acc { display: flex; gap: calc(46.3 * var(--u)); }
+.ev-panel { position: relative; flex: 0 0 calc(347.44 * var(--u)); overflow: hidden; background: var(--box); cursor: pointer; transition: flex-basis 0.55s cubic-bezier(0.22, 0.61, 0.36, 1); }
+.ev-panel.on { flex-basis: calc(896 * var(--u)); cursor: default; }
+.ev-panel > .img { position: absolute; inset: 0; }
+.ev-panel > .img::after { background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 45%, rgba(0, 0, 0, 0.45) 100%); }
+.ev-text { position: absolute; inset: 0; z-index: 1; color: #fff; }
+.ev-text h3 { position: absolute; left: calc(47 * var(--u)); top: calc(45.8 * var(--u)); width: calc(292 * var(--u)); margin: 0; }
+.ev-text p { position: absolute; left: calc(47 * var(--u)); top: calc(207.3 * var(--u)); width: calc(568 * var(--u)); margin: 0; opacity: 0; transition: opacity 0.25s; }
+.ev-text .uline { position: absolute; left: calc(47 * var(--u)); top: calc(600.2 * var(--u)); color: #fff; border-bottom-color: #fff; opacity: 0; transition: opacity 0.25s; }
+.ev-panel.on .ev-text p, .ev-panel.on .ev-text .uline { opacity: 1; transition: opacity 0.35s 0.25s; }
+.ev-panel:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.venue-meta { margin-top: calc(8.4 * var(--u)); }
+.venue-desc { margin: calc(25.2 * var(--u)) 0 0; }
+.rcard.venue .ractions { margin-top: calc(29.8 * var(--u)); }
+@media (max-width: 900px) {
+  .ev-acc { flex-direction: column; gap: 12px; height: auto !important; }
+  .ev-panel, .ev-panel.on { flex: none; min-height: 300px; }
+  .ev-text { position: relative; inset: auto; padding: 20px; min-height: 300px; display: flex; flex-direction: column; gap: 12px; }
+  .ev-text h3, .ev-text p, .ev-text .uline { position: static; width: auto; opacity: 1; }
+  .ev-text .uline { margin-top: auto; align-self: flex-start; }
+  .venue-meta { margin-top: 8px; } .venue-desc { margin-top: 10px; } .rcard.venue .ractions { margin-top: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .ev-panel { transition: none; } }

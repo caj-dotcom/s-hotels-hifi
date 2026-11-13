@@ -464,14 +464,14 @@ main.page { height: auto; }
 }
 
 /* Activity cards (Experiences): same card as Rooms & Suites */
-.rcard.act > .img { height: calc(391 * var(--u)); }
-.rcard.act .rcard-body { padding-top: calc(30 * var(--u)); }
+.rcard.act > .img { height: calc(400 * var(--u)); }
+.rcard.act .rcard-body { padding-top: calc(32 * var(--u)); }
 .act-time { display: flex; align-items: center; gap: calc(6 * var(--u)); margin: calc(22 * var(--u)) 0 0; text-transform: uppercase; }
 .act-desc { margin: calc(33 * var(--u)) 0 0; }
 .act-time + .act-desc { margin-top: calc(33 * var(--u)); }
-.rcard.act h3 + .act-desc { margin-top: calc(22 * var(--u)); }
+.rcard.act h3 + .act-desc { margin-top: calc(32 * var(--u)); }
 @media (max-width: 900px) {
-  .rcard.act > .img { height: auto; aspect-ratio: 517.5 / 391; }
+  .rcard.act > .img { height: auto; aspect-ratio: 528 / 400; }
   .act-time { margin-top: 10px; }
   .act-desc, .act-time + .act-desc, .rcard.act h3 + .act-desc { margin-top: 12px; }
 }

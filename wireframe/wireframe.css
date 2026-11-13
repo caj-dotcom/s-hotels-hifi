@@ -5,16 +5,17 @@
 :root {
   --box: #f4f4f4;
   --dark: #ececec;
-  --line: #d9d9d9;
+  --line: rgb(217 217 217 / 0.5); /* secondary strokes at 50% */
+  --ph-line: #d9d9d9; /* image placeholder outline + X */
   --rating: #e8e8e8;
   --tag: #d9d9d9;
 }
 
 /* Image placeholders */
-.img { background: var(--box); outline: 1px solid var(--line); outline-offset: -1px; }
+.img { background: var(--box); outline: 1px solid var(--ph-line); outline-offset: -1px; }
 .img.shade::after, .hero::after { display: none; }
 .ph-x { position: absolute; inset: 0; width: 100%; height: 100%; }
-.ph-x line { stroke: var(--line); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.ph-x line { stroke: var(--ph-line); stroke-width: 1; vector-effect: non-scaling-stroke; }
 .hero { background: var(--box); box-shadow: inset 0 -1px 0 var(--line); }
 .hero-media video { display: none; }
 
@@ -31,7 +32,7 @@
 .btn-light { background: var(--ink); color: #fff; }
 
 /* Placeholder thumbnails in the hotel dropdown */
-.hotel-panel a > svg { position: relative; aspect-ratio: 4 / 3; height: auto; background: var(--box); outline: 1px solid var(--line); outline-offset: -1px; }
+.hotel-panel a > svg { position: relative; aspect-ratio: 4 / 3; height: auto; background: var(--box); outline: 1px solid var(--ph-line); outline-offset: -1px; }
 
 /* Our Story: the 2024 banner is a dark placeholder in the wireframe */
 .img.dark { background: #777; }

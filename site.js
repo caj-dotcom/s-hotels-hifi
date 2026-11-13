@@ -277,3 +277,20 @@
     });
   });
 })();
+
+/* FAQ (desktop): an open answer pushes the rows below it down instead of covering them */
+(function () {
+  var rows = Array.prototype.slice.call(document.querySelectorAll(".faq-row"));
+  if (!rows.length) return;
+  var mq = window.matchMedia("(max-width: 900px)");
+  function layout() {
+    var push = 0;
+    rows.forEach(function (d) {
+      d.style.transform = push && !mq.matches ? "translateY(" + push + "px)" : "";
+      if (d.open && !mq.matches) push += d.querySelector("p").offsetHeight;
+    });
+  }
+  rows.forEach(function (d) { d.addEventListener("toggle", layout); });
+  window.addEventListener("resize", layout);
+  if (mq.addEventListener) mq.addEventListener("change", layout);
+})();

@@ -294,3 +294,29 @@
   window.addEventListener("resize", layout);
   if (mq.addEventListener) mq.addEventListener("change", layout);
 })();
+
+/* Rooms & Suites filter: show one kind of card and close up the rows that empty out */
+(function () {
+  var sw = document.querySelector("[data-filter]");
+  if (!sw) return;
+  var btns = Array.prototype.slice.call(sw.querySelectorAll("[data-kind]"));
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".rcard[data-kind]"));
+  var sec = document.querySelector("[data-grid-sec]");
+  var grid = document.querySelector(".room-grid");
+  var baseSh = sec ? parseFloat(sec.style.getPropertyValue("--sh")) : 0;
+  var baseH = grid ? parseFloat(grid.style.getPropertyValue("--h")) : 0;
+  var row = sec ? +sec.dataset.row : 0, rows = sec ? +sec.dataset.rows : 0;
+  function apply(kind) {
+    var n = 0;
+    cards.forEach(function (c) { var on = kind === "all" || c.dataset.kind === kind; c.hidden = !on; if (on) n++; });
+    btns.forEach(function (b) { var on = b.dataset.kind === kind; b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on)); });
+    if (sec && row) {
+      var cut = (rows - Math.ceil(n / 3)) * row;
+      sec.style.setProperty("--sh", baseSh - cut);
+      grid.style.setProperty("--h", baseH - cut);
+    }
+  }
+  btns.forEach(function (b) { b.addEventListener("click", function () { apply(b.dataset.kind); }); });
+  var h = location.hash.replace("#", "");
+  if (h === "rooms" || h === "suites") apply(h === "rooms" ? "room" : "suite");
+})();

@@ -439,3 +439,26 @@ main.page { height: auto; }
 
 /* Home link on sub pages (top bar, beside the logo) */
 .home-link { justify-content: flex-start; }
+
+/* Kingston Rooms & Suites page: card grid with a See all / Rooms / Suites filter */
+.room-grid { display: grid; grid-template-columns: repeat(3, calc(528 * var(--u))); column-gap: calc(61 * var(--u)); row-gap: calc(48 * var(--u)); align-content: start; }
+.rcard { display: flex; flex-direction: column; height: calc(640 * var(--u)); background: #fff; outline: 1px solid var(--line); outline-offset: -1px; }
+.rcard[hidden] { display: none; }
+.rcard > .img { height: calc(344 * var(--u)); flex: none; }
+.rcard-body { padding: calc(32.6 * var(--u)) calc(48 * var(--u)) 0; }
+.rcard h3 { margin: 0; }
+.rmeta { list-style: none; margin: calc(23.4 * var(--u)) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: calc(6 * var(--u)) calc(24 * var(--u)); color: var(--mute); }
+.rmeta + .rmeta { margin-top: calc(14 * var(--u)); }
+.rmeta li { display: inline-flex; align-items: center; gap: calc(6 * var(--u)); }
+.rmeta svg { width: max(calc(16 * var(--u)), 12px); height: max(calc(16 * var(--u)), 12px); flex: none; color: var(--ink); }
+.ractions { display: flex; align-items: center; gap: calc(32 * var(--u)); margin-top: calc(50 * var(--u)); }
+.btn-dark.rbtn { height: calc(43 * var(--u)); min-height: 32px; padding: 0 calc(12 * var(--u)); font-size: max(calc(16 * var(--u)), 11px); }
+@media (max-width: 900px) {
+  .room-grid { grid-template-columns: 1fr; row-gap: 16px; height: auto !important; }
+  .rcard { height: auto; }
+  .rcard > .img { height: auto; aspect-ratio: 528 / 344; }
+  .rcard-body { padding: 18px 18px 22px; }
+  .rmeta { margin-top: 12px; }
+  .rmeta + .rmeta { margin-top: 8px; }
+  .ractions { margin-top: 20px; gap: 24px; }
+}

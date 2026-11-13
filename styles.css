@@ -378,10 +378,11 @@ main.page { height: auto; }
 .award-eyebrow { letter-spacing: 0.3em !important; }
 .award-logos { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; justify-content: center; gap: calc(40 * var(--u)); }
 .award-logos li { flex: none; width: calc(150 * var(--u)); height: calc(130 * var(--u)); display: grid; place-items: center; }
-.award-logos img { max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain; filter: grayscale(1); }
+.award-logos img { max-height: calc(130 * var(--u)); max-width: 100%; width: auto; height: auto; object-fit: contain; filter: grayscale(1); }
 @media (max-width: 900px) {
   .award-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px 12px; margin-top: 16px; }
   .award-logos li { width: auto; height: 76px; }
+  .award-logos img { max-height: 76px; }
 }
 
 /* Our Story page */
@@ -409,7 +410,7 @@ main.page { height: auto; }
 
 /* Experiences page: hotel switch */
 .ex-switch { display: flex; justify-content: center; align-items: center; gap: calc(56 * var(--u)); }
-.ex-switch button { padding: 0 0 calc(3 * var(--u)); border: 0; border-bottom: 1px solid transparent; background: none; font: 400 max(calc(18 * var(--u)), 12px)/1.3 var(--sans); letter-spacing: 0.02em; text-transform: uppercase; color: var(--ink); cursor: pointer; transition: border-color 0.2s, opacity 0.2s; }
+.ex-switch button { padding: 0 0 calc(3 * var(--u)); border: 0; border-bottom: 1px solid transparent; background: none; font: 400 max(calc(16 * var(--u)), 12px)/1.3 var(--sans); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); cursor: pointer; transition: border-color 0.2s, opacity 0.2s; }
 .ex-switch button:not(.on):hover { opacity: 0.6; }
 .ex-switch button.on { border-bottom-color: var(--ink); }
 .ex-switch button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
@@ -517,3 +518,14 @@ main.page { height: auto; }
   .venue-meta { margin-top: 8px; } .venue-desc { margin-top: 10px; } .rcard.venue .ractions { margin-top: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .ev-panel { transition: none; } }
+
+/* Mobile section rhythm (QA): every section starts 56px below the last, 32px after an intro block */
+@media (max-width: 900px) {
+  main .wf-sec + .wf-sec { padding-top: 56px; }
+  main .wf-sec > .shift > :first-child,
+  main .wf-sec > .shift > .rule:first-child + *,
+  main .wf-sec > .shift > .rule.gap:first-child + *,
+  main .wf-sec > .shift > section:first-child > :first-child { margin-top: 0 !important; }
+  main [data-section="booking"] { padding-top: 16px !important; }
+  main [data-section="intro"] + .wf-sec, main [data-section="served"] + .wf-sec, main [data-section="feature"] + .wf-sec { padding-top: 32px; }
+}

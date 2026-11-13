@@ -389,7 +389,7 @@ main.page { height: auto; }
 .note-box { background: #fff; }
 .nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 @media (max-width: 900px) {
-  .page-story main.page { padding-top: 96px; }
+  .page-story main.page, .page-rooms main.page { padding-top: 96px; }
   .story-copy p + p { margin-top: 1em; }
   .note-box.a { margin: -48px 16px 0; padding: 20px; height: auto !important; z-index: 1; box-shadow: 0 1px 0 var(--line); }
   .note-box .a { margin-top: 0; }
@@ -474,4 +474,20 @@ main.page { height: auto; }
   .rcard.act > .img { height: auto; aspect-ratio: 528 / 400; }
   .act-time { margin-top: 10px; }
   .act-desc, .act-time + .act-desc, .rcard.act h3 + .act-desc { margin-top: 12px; }
+}
+
+/* Kingston Dining: outlet cards and the 24/7 room service ribbon */
+.dine-desc { margin: calc(7.6 * var(--u)) 0 0; }
+.rcard.dine .ractions { margin-top: calc(32 * var(--u)); }
+.ribbon { position: absolute; z-index: 2; width: calc(131.72 * var(--u)); height: calc(183.76 * var(--u)); display: flex; flex-direction: column; align-items: center; padding-top: calc(14 * var(--u)); background: #fff; color: var(--ink); font-family: var(--sans); line-height: 1; text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 32 * var(--u)), 0 100%); }
+.ribbon b { font-weight: 500; font-size: calc(46 * var(--u)); letter-spacing: -0.02em; }
+.ribbon .r1 { margin-top: calc(6 * var(--u)); font-size: calc(26 * var(--u)); font-weight: 500; }
+.ribbon .r2 { margin-top: calc(4 * var(--u)); font-size: calc(14 * var(--u)); font-weight: 500; letter-spacing: 0.02em; }
+@media (max-width: 900px) {
+  .ribbon { left: auto !important; right: 12px; top: 0 !important; width: 74px; height: 104px; padding-top: 8px; }
+  .ribbon b { font-size: 26px; } .ribbon .r1 { font-size: 15px; margin-top: 4px; } .ribbon .r2 { font-size: 9px; margin-top: 3px; }
+  .ribbon { clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 18px), 0 100%); }
+  .rcard.dine .ractions { margin-top: 18px; }
+  .dine-desc { margin-top: 8px; }
 }

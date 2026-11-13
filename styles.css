@@ -369,14 +369,14 @@ main.page { height: auto; }
   .xp-i.s { height: 30vw; } .xp-i.m { height: 46vw; } .xp-i.l { height: 64vw; }
 }
 
-/* Awards: logo row (replaces the tile rail) */
-.award-logos { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: calc(80 * var(--u)); }
-.award-logos li { flex: none; height: calc(150 * var(--u)); display: grid; place-items: center; }
-.award-logos img { height: 100%; width: auto; max-width: calc(152 * var(--u)); object-fit: contain; filter: grayscale(1); }
+/* Awards: centred eyebrow over one row of logos */
+.award-eyebrow { letter-spacing: 0.3em !important; }
+.award-logos { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; justify-content: center; gap: calc(40 * var(--u)); }
+.award-logos li { flex: none; width: calc(150 * var(--u)); height: calc(130 * var(--u)); display: grid; place-items: center; }
+.award-logos img { max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain; filter: grayscale(1); }
 @media (max-width: 900px) {
-  .award-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
-  .award-logos li { height: 76px; }
-  .award-logos img { max-width: 100%; }
+  .award-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px 12px; margin-top: 16px; }
+  .award-logos li { width: auto; height: 76px; }
 }
 
 /* Our Story page */
